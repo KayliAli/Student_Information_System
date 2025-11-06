@@ -1,4 +1,4 @@
-package frontend.controllers;
+package com.example.obs.controllers;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -21,7 +21,7 @@ public class LoginController {
     @FXML
     public void ogrenci_giris_button(ActionEvent event)throws IOException {
         System.out.println("Öğrenci giriş butonuna tıklandı!");
-        Parent root = FXMLLoader.load(getClass().getResource("/frontend/fxml/ogrencigiris.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/com/example/obs/fxml/OgrenciGiris.fxml"));
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         Scene scene = new Scene(root);
         stage.setScene(scene);
@@ -30,7 +30,7 @@ public class LoginController {
     }
     public void akademisyen_giris_button(ActionEvent event)throws IOException {
         System.out.println("akademisyen giris butonuna basıldı");
-        Parent root = FXMLLoader.load(getClass().getResource("/frontend/fxml/akademisyengiris.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/com/example/obs/fxml/AkademisyenGiris.fxml"));
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         Scene scene = new Scene(root);
         stage.setScene(scene);
@@ -45,7 +45,7 @@ public class LoginController {
         String sifre = ogrenci_sifre.getText();
         Boolean kontrol=sifreConroller.sifre_kontrol_ogrenci(numarasi,sifre);
         if(kontrol==true) {
-            Parent root = FXMLLoader.load(getClass().getResource("/frontend/fxml/ogrencianasayfa.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("/com/example/obs/fxml/OgrenciAnaSayfa.fxml"));
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             Scene scene = new Scene(root);
             stage.setScene(scene);

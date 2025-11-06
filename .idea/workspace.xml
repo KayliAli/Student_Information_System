@@ -4,13 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d997f2b1-72dd-40ce-9503-5192eee07a3c" name="Changes" comment=".">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/javafx_sdk_17_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/lib.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Student_Information_System.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Student_Information_System.iml" afterDir="false" />
+    <list default="true" id="4392cad0-74c9-4bea-9076-ad852a72f9e7" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/Student_Information_System.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/javafx_sdk_17_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/lib.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/Frontend/Controllers/sdsd.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/main/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/Backend/Data/da.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/Backend/Temp/beda.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/Frontend/CSS/sdsda.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/Frontend/Controllers/LoginController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/Frontend/Controllers/SifreConroller.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/Frontend/FXML/AkademisyenGiris.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/Frontend/FXML/GirisAnaSayfa.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/Frontend/FXML/OgrenciAnaSayfa.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/Frontend/FXML/OgrenciGiris.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/Launcher.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/Main.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,6 +32,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="FxmlFile" />
         <option value="Class" />
       </list>
     </option>
@@ -27,22 +40,29 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "Soinnate"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;KayliAli&quot;
   }
-}]]></component>
+}</component>
   <component name="GithubPullRequestsUISettings"><![CDATA[{
   "selectedUrlAndAccountId": {
     "url": "https://github.com/KayliAli/Student_Information_System.git",
     "accountId": "e20f9c40-1a9b-4998-a0ee-450ddb401660"
   }
 }]]></component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
   <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 1
+  &quot;associatedIndex&quot;: 8
 }</component>
-  <component name="ProjectId" id="356CzHEPd31riFYkX3NOWHMMSxG" />
+  <component name="ProjectId" id="34pRx3LitJE92vlZNBaUCsNcq9Q" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -50,11 +70,11 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.Launcher.executor": "Run",
-    "Application.Main.executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Application.MainApp.executor": "Run",
+    "Application.OBSApplication.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultAutoModeForALLUsers.v1": "true",
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
     "git-widget-placeholder": "main",
@@ -66,8 +86,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "onboarding.tips.debug.path": "C:/Soinnate/Kodlama/Java/StudentInformationSystem/src/Main.java",
-    "project.structure.last.edited": "Modules",
+    "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "preferences.JavaFX",
@@ -77,10 +96,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Soinnate\Kodlama\Java\StudentInformationSystem\main\Backend" />
-      <recent name="C:\Soinnate\Kodlama\Java\StudentInformationSystem\main" />
-      <recent name="C:\Soinnate\Kodlama\Java\StudentInformationSystem\SIS" />
-      <recent name="C:\Soinnate\Kodlama\Java\StudentInformationSystem\SIS\Frontend\GUI" />
+      <recent name="D:\Java_Programs\IntelliJ_Projects\student_information_system\src\main\resources\com\example\obs\fxml" />
+      <recent name="D:\Java_Programs\IntelliJ_Projects\student_information_system\src\main\resources\com\example\obs" />
+      <recent name="D:\Java_Programs\IntelliJ_Projects\student_information_system\src\main\java\com\example\obs" />
+      <recent name="D:\Java_Programs\IntelliJ_Projects\student_information_system\src\main\resources\com\example\obs\DataBase\KullaniciBilgileri" />
+      <recent name="D:\Java_Programs\IntelliJ_Projects\student_information_system\src\main\resources\com\example\obs\DataBase" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -93,53 +113,38 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="d997f2b1-72dd-40ce-9503-5192eee07a3c" name="Changes" comment="" />
-      <created>1762421399518</created>
+      <changelist id="4392cad0-74c9-4bea-9076-ad852a72f9e7" name="Changes" comment="" />
+      <created>1761908770042</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1762421399518</updated>
-      <workItem from="1762421400915" duration="1569000" />
-      <workItem from="1762424800220" duration="49000" />
-      <workItem from="1762425369091" duration="90000" />
-      <workItem from="1762425462941" duration="1364000" />
-      <workItem from="1762426890752" duration="1297000" />
+      <updated>1761908770042</updated>
+      <workItem from="1761908771310" duration="206000" />
+      <workItem from="1761908997654" duration="965000" />
+      <workItem from="1761909991124" duration="3758000" />
+      <workItem from="1761989754104" duration="11863000" />
+      <workItem from="1762152833325" duration="1122000" />
+      <workItem from="1762164092247" duration="2742000" />
+      <workItem from="1762176258012" duration="1068000" />
+      <workItem from="1762232799225" duration="458000" />
+      <workItem from="1762238647532" duration="363000" />
+      <workItem from="1762239230636" duration="226000" />
+      <workItem from="1762247976627" duration="1415000" />
+      <workItem from="1762249432536" duration="1023000" />
+      <workItem from="1762264135933" duration="6231000" />
+      <workItem from="1762338716289" duration="715000" />
+      <workItem from="1762356957693" duration="128000" />
+      <workItem from="1762358528211" duration="1294000" />
+      <workItem from="1762409097568" duration="190000" />
+      <workItem from="1762414287853" duration="10000" />
+      <workItem from="1762414649378" duration="1219000" />
+      <workItem from="1762421294191" duration="1999000" />
+      <workItem from="1762425316586" duration="536000" />
+      <workItem from="1762444375850" duration="213000" />
     </task>
-    <task id="LOCAL-00001" summary=".">
-      <option name="closed" value="true" />
-      <created>1762425623081</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1762425623081</updated>
-    </task>
-    <task id="LOCAL-00002" summary=".">
-      <option name="closed" value="true" />
-      <created>1762425731139</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1762425731139</updated>
-    </task>
-    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="." />
-    <option name="LAST_COMMIT_MESSAGE" value="." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

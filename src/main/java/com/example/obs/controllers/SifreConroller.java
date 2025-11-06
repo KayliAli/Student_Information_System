@@ -1,4 +1,4 @@
-package frontend.controllers;
+package com.example.obs.controllers;
 
 public class SifreConroller {
 
