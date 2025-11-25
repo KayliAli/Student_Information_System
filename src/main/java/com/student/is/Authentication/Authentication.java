@@ -6,30 +6,59 @@ public class Authentication {
     public static String currentUser;
     public static boolean authenticated;
 
+//    public void main(String[] args){
+//        System.out.println(checkStudentAuth("02240200002@ogr.inonu.edu.tr","12345"));
+//    }
 
-    public boolean chekAuth(String login , String password) {
-
+    public boolean checkStudentAuth(String login , String password) {
         try  {
             BufferedReader br = new BufferedReader(new FileReader("src/main/resources/com/student/is/database/auth.bin"));
             String line;
             while ((line = br.readLine()) != null){
-                System.out.println(line);
+                if (line.equals("personnelend"))
+                        break;
+            }
+            while ((line = br.readLine()) != null){
+                String loginTemp = line.split(" ")[0];
+                if (loginTemp.equals(login)) {
+                    if (line.split(" ")[1].equals(password)){
+                        currentUser = loginTemp;
+                        authenticated = true;
+                        return true;
+                    }
+                    return false;
+                }
             }
             br.close();
         }
         catch (IOException e){
             System.out.println("Error reading file!" + e);
         }
-
-
-        String temp = DataBase_File_ogrenci(login);
-        if (temp.equals(password)) {
-            return true;
-        } else return false;
+        return false;
     }
-
-    public String DataBase_File_ogrenci(String ogr_no ){
-        return "1234" ; // şifreyi return edecek
+    public boolean checkPersonnelAuth(String login , String password) {
+        try  {
+            BufferedReader br = new BufferedReader(new FileReader("src/main/resources/com/student/is/database/auth.bin"));
+            String line;
+            while ((line = br.readLine()) != null){
+                if (line.equals("personnelend"))
+                    break;
+                String loginTemp = line.split(" ")[0];
+                if (loginTemp.equals(login)) {
+                    if (line.split(" ")[1].equals(password)){
+                        currentUser = loginTemp;
+                        authenticated = true;
+                        return true;
+                    }
+                    return false;
+                }
+            }
+            br.close();
+        }
+        catch (IOException e){
+            System.out.println("Error reading file!" + e);
+        }
+        return false;
     }
 }
 

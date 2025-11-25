@@ -35,7 +35,7 @@ public class LoginController {
     public void studentMainPage(ActionEvent event)throws IOException {
         String login = this.login.getText();
         String password = this.password.getText();
-        Boolean status= authentication.chekAuth(login,password);
+        Boolean status= authentication.checkStudentAuth(login,password);
         if(status) {
             Parent root = FXMLLoader.load(getClass().getResource("/com/student/is/fxml/StudentMainPage.fxml"));
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
