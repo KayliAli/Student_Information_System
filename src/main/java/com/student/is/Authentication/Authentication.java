@@ -1,6 +1,6 @@
-package com.example.obs.Authentication;
+package com.student.is.Authentication;
 
-public class LoginConroller {
+public class Authentication {
 
     public String DataBase_File_ogrenci(String ogr_no ){ // burda txt dosyasına gidip gerekli bilgiyi getirecek
         return "1234" ; // şifreyi return edecek

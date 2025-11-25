@@ -1,4 +1,4 @@
-package com.example.obs.PageControllers;
+package com.student.is.PageControllers;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -10,7 +10,7 @@ import java.io.IOException;
 public class StartController extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(StartController.class.getResource("/com/example/obs/fxml/MainLogin.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(StartController.class.getResource("/com/student/is/fxml/MainLogin.fxml"));
         Scene scene = new Scene(fxmlLoader.load(),1280,768);
         stage.setTitle("OBS Giriş Ekranı");
         stage.setScene(scene);

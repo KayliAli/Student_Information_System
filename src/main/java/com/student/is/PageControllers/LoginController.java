@@ -1,6 +1,6 @@
-package com.example.obs.PageControllers;
+package com.student.is.PageControllers;
 
-import com.example.obs.Authentication.LoginConroller;
+import com.student.is.Authentication.Authentication;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -14,7 +14,7 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class LoginController {
-    LoginConroller loginConroller = new LoginConroller();
+    Authentication authentication = new Authentication();
     @FXML
     private Button ogrenci_giris;  // fx:id ile bağladık
 
@@ -22,7 +22,7 @@ public class LoginController {
     @FXML
     public void ogrenci_giris_button(ActionEvent event)throws IOException {
         System.out.println("Öğrenci giriş butonuna tıklandı!");
-        Parent root = FXMLLoader.load(getClass().getResource("/com/example/obs/fxml/StudentLogin.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/com/student/is/fxml/StudentLogin.fxml"));
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         Scene scene = new Scene(root);
         stage.setScene(scene);
@@ -31,7 +31,7 @@ public class LoginController {
     }
     public void akademisyen_giris_button(ActionEvent event)throws IOException {
         System.out.println("akademisyen giris butonuna basıldı");
-        Parent root = FXMLLoader.load(getClass().getResource("/com/example/obs/fxml/PersonelLogin.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/com/student/is/fxml/PersonelLogin.fxml"));
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         Scene scene = new Scene(root);
         stage.setScene(scene);
@@ -44,9 +44,9 @@ public class LoginController {
     public void ogrenci_anasayfa(ActionEvent event)throws IOException {
         String numarasi = ogrenci_numarasi.getText();
         String sifre = ogrenci_sifre.getText();
-        Boolean kontrol= loginConroller.sifre_kontrol_ogrenci(numarasi,sifre);
+        Boolean kontrol= authentication.sifre_kontrol_ogrenci(numarasi,sifre);
         if(kontrol==true) {
-            Parent root = FXMLLoader.load(getClass().getResource("/com/example/obs/fxml/StudentMainPage.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("/com/student/is/fxml/StudentMainPage.fxml"));
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             Scene scene = new Scene(root);
             stage.setScene(scene);

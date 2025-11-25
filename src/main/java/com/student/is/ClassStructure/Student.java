@@ -1,4 +1,4 @@
-package com.example.obs.ClassStructure;
+package com.student.is.ClassStructure;
 
 public class Student {
     static int stuNumCounter=224000000;

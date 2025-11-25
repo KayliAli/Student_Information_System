@@ -1,4 +1,4 @@
-module com.example.obs {
+module com.student.is {
     requires javafx.controls;
     requires javafx.fxml;
 
@@ -8,10 +8,10 @@ module com.example.obs {
     requires javafx.base;
     requires javafx.graphics;
 
-    opens com.example.obs to javafx.fxml;
-    exports com.example.obs;
-    exports com.example.obs.PageControllers;
-    opens com.example.obs.PageControllers to javafx.fxml;
-    exports com.example.obs.Authentication;
-    opens com.example.obs.Authentication to javafx.fxml;
+    opens com.student.is to javafx.fxml;
+    exports com.student.is;
+    exports com.student.is.PageControllers;
+    opens com.student.is.PageControllers to javafx.fxml;
+    exports com.student.is.Authentication;
+    opens com.student.is.Authentication to javafx.fxml;
 }

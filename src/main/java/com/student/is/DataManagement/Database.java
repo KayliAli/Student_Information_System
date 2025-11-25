@@ -1,8 +1,8 @@
-package com.example.obs.DataManagement;
+package com.student.is.DataManagement;
 
-import com.example.obs.ClassStructure.Lecture;
-import com.example.obs.ClassStructure.Personel;
-import com.example.obs.ClassStructure.Student;
+import com.student.is.ClassStructure.Lecture;
+import com.student.is.ClassStructure.Personel;
+import com.student.is.ClassStructure.Student;
 
 import java.io.*;
 import java.util.ArrayList;
