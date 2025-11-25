@@ -15,12 +15,23 @@ import java.io.IOException;
 
 public class LoginController {
     Authentication authentication = new Authentication();
-    @FXML
-    private Button ogrenci_giris;  // fx:id ile bağladık
 
-    // onAction metodu (ismi tam olarak FXML ile aynı olmalı)
     @FXML
-    public void ogrenci_giris_button(ActionEvent event)throws IOException {
+    public void backButtonAction(ActionEvent event) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/student/is/fxml/MainLogin.fxml"));
+        Parent root = loader.load();
+        Scene oncekiSahne = new Scene(root);
+
+        Node source = (Node) event.getSource();
+        Stage mevcutStage = (Stage) source.getScene().getWindow();
+
+        mevcutStage.setScene(oncekiSahne);
+        mevcutStage.show();
+
+    }
+
+    @FXML
+    public void studentLoginButton(ActionEvent event)throws IOException {
         System.out.println("Öğrenci giriş butonuna tıklandı!");
         Parent root = FXMLLoader.load(getClass().getResource("/com/student/is/fxml/StudentLogin.fxml"));
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -29,7 +40,7 @@ public class LoginController {
         stage.show();
 
     }
-    public void akademisyen_giris_button(ActionEvent event)throws IOException {
+    public void personLoginButton(ActionEvent event)throws IOException {
         System.out.println("akademisyen giris butonuna basıldı");
         Parent root = FXMLLoader.load(getClass().getResource("/com/student/is/fxml/PersonelLogin.fxml"));
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -38,13 +49,13 @@ public class LoginController {
         stage.show();
 
     }
-    public TextField ogrenci_numarasi;
-    public TextField ogrenci_sifre;
+    public TextField studentLogin;
+    public TextField studentPassword;
 
-    public void ogrenci_anasayfa(ActionEvent event)throws IOException {
-        String numarasi = ogrenci_numarasi.getText();
-        String sifre = ogrenci_sifre.getText();
-        Boolean kontrol= authentication.sifre_kontrol_ogrenci(numarasi,sifre);
+    public void studentPage(ActionEvent event)throws IOException {
+        String numarasi = studentLogin.getText();
+        String sifre = studentPassword.getText();
+        Boolean kontrol= authentication.checkStudentAuth(numarasi,sifre);
         if(kontrol==true) {
             Parent root = FXMLLoader.load(getClass().getResource("/com/student/is/fxml/StudentMainPage.fxml"));
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -56,11 +67,35 @@ public class LoginController {
         else{
             System.out.println("Hatalı kullanıcı adı veya şifre!!");
         }
-        ogrenci_numarasi.clear();
-        ogrenci_sifre.clear();
+        studentPassword.clear();
+        studentLogin.clear();
 
     }
-    public void sifremi_unuttum(ActionEvent event)throws IOException {
+    @FXML
+    public TextField personelLogin;
+    public TextField personelPassword;
+
+    public void personPage(ActionEvent event)throws IOException {
+        String login = personelLogin.getText();
+        String sifre = personelPassword.getText();
+        Boolean kontrol= authentication.checkPersonnelAuth(login,sifre);
+        if(kontrol==true) {
+            Parent root = FXMLLoader.load(getClass().getResource("/com/student/is/fxml/PersonelMainPage.fxml"));
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            Scene scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
+
+        }
+        else{
+            System.out.println("Hatalı kullanıcı adı veya şifre!!");
+        }
+        personelLogin.clear();
+        personelPassword.clear();
+
+
+    }
+    public void forgotPasswordButton(ActionEvent event)throws IOException {
 
     }
 

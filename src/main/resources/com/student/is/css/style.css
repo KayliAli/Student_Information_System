@@ -66,3 +66,13 @@
     -fx-font-style: italic;
 }
 
+.button-back{
+    -fx-background-radius: 50;
+    -fx-background-color: #fff;
+    -fx-padding: 8;
+    -fx-alignment: center;
+    -fx-min-width: 80px;
+    -fx-max-width: 80px;
+    -fx-min-height: 80px;
+    -fx-max-height: 80px;
+}
