@@ -1,21 +1,27 @@
 package com.student.is.DataManagement;
 import com.student.is.ClassStructure.Lecture;
-import com.student.is.ClassStructure.Personel;
+import com.student.is.ClassStructure.Personal;
 import com.student.is.ClassStructure.Student;
 import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.LinkedList;
 
 
 public class Database {
-    public static  ArrayList<Personel> personalList = new ArrayList<>();
+    public static  ArrayList<Personal> personalList = new ArrayList<>();
     public static ArrayList<Lecture> lectureList = new ArrayList<>();
     public static ArrayList<Student> studentList = new ArrayList<>();
     public static ArrayList<Student> findedStudentList = new ArrayList<>();
+
+
+    public static void main(String[] args){
+        createStudentList();
+        createLectureList();
+        createPersonalList();
+        byte end=0;
+    }
 
 
     public static void createTemp() {
@@ -60,13 +66,12 @@ public class Database {
         }
 
     }
-
     public static void createStudentList(){
         try  {
             BufferedReader br = new BufferedReader(new FileReader("src/main/resources/com/student/is/database/data.bin"));
             String line;
             while ((line = br.readLine()) != null) {
-                if (line.split("[*]")[0].equals("##stuNum"))
+                if (line.split("[*]")[0].equals("##stuId"))
                         break;
             }
 
@@ -76,7 +81,7 @@ public class Database {
                 }
                 String[] temp = line.split("[*]");
                 Student stu = new Student();
-                stu.stuNum = Long.parseLong(temp[0]);
+                stu.stuId = Long.parseLong(temp[0]);
                 stu.firstName = temp[1];
                 stu.lastName = temp[2];
                 stu.age = Integer.parseInt(temp[3]);
@@ -91,7 +96,6 @@ public class Database {
             System.out.println("Error reading file!" + e);
         }
     }
-
     public static void createLectureList(){
         try  {
             BufferedReader br = new BufferedReader(new FileReader("src/main/resources/com/student/is/database/data.bin"));
@@ -109,16 +113,46 @@ public class Database {
                 Lecture lec = new Lecture();
                 lec.lectureCode = temp[0];
                 lec.lectureName = temp[1];
-                lec.lectureMandatory = Boolean.getBoolean(temp[2]);
-                lec.lectureTheory = Integer.parseInt(temp[3]);
-                lec.lectureApplication = Integer.parseInt(temp[4]);
-                lec.lectureCredit = Integer.parseInt(temp[5]);
-                lec.lectureAKTS = Integer.parseInt(temp[6]);
-                lec.lectureClass = Integer.parseInt(temp[7]);
-                lec.lectureLang = temp[8];
-                lec.lectureType = temp[9];
+                lec.lectureMandatory = Boolean.parseBoolean(temp[2]);
+                lec.lectureCredit = Integer.parseInt(temp[3]);
+                lec.lectureAKTS = Integer.parseInt(temp[4]);
+                lec.lectureClass = Integer.parseInt(temp[5]);
+                lec.lectureLang = temp[6];
+                lec.lectureType = temp[7];
+                lec.lectureTheory = Integer.parseInt(temp[8]);
+                lec.lectureApplication = Integer.parseInt(temp[9]);
                 lec.lectureTeacher = Long.parseLong(temp[10]);
                 lectureList.add(lec);
+            }
+            br.close();
+        }
+        catch (IOException e){
+            System.out.println("Error reading file!" + e);
+        }
+
+    }
+    public static void createPersonalList(){
+        try  {
+            BufferedReader br = new BufferedReader(new FileReader("src/main/resources/com/student/is/database/data.bin"));
+            String line;
+            while ((line = br.readLine()) != null) {
+                if (line.split("[*]")[0].equals("&&perId"))
+                    break;
+            }
+
+            while ((line = br.readLine()) != null){
+                if (line.equals("")){
+                    break;
+                }
+                String[] temp = line.split("[*]");
+                Personal per = new Personal();
+                per.perId = Long.parseLong(temp[0]);
+                per.name = temp[1];
+                per.surname = temp[2];
+                per.title = temp[3];
+                per.email = temp[4];
+                per.web = temp[5];
+                personalList.add(per);
             }
             br.close();
         }
