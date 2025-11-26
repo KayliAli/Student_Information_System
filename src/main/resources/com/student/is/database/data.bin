@@ -1,29 +1,90 @@
-%%lecture code*lecture name*mandatory(True)/optional(False)*theoretical*application*credit*AKTS*classYear*language*type*teacher
-BİLM201-2021*Veri Yapilari*True*5*2*4*6*2*Türkçe*Yüz Yüze*34554334555
-BİLM203-2022*Nesne Tabanlı Programlama*True*5*2*4*6*2*Türkçe*Yüz Yüze*24234364355
-BİLM205-2019*Biçimsel Diller ve Özdevinirler*True*3*0*3*5*2*Türkçe*Yüz Yüze*54332423423
-BİLM223-2022*Mantık Devreleri Tasarımı*True*5*2*4*5*2*Türkçe*Yüz Yüze*88237684283
-BİLM289-2022*Veri Organizasyonu*True*3*0*3*5*2*Türkçe*Yüz Yüze*34554334555
+%%lecture code*lecture name*mandatory(true)/optional(false)*credit*AKTS*classYear*language*type*theoretical*application*teacher
+BİLM101-2019*Bilgisayar Muhendisligine Giris*true*2*4*1*Türkçe*Yüz Yüze*2*0*64234234234
+BİLM103-2022*Ayrik Matematik*true*3*4*1*Türkçe*Yüz Yüze*3*0*74565464545
+BİLM105-2021*Programlama I*true*4*7*1*Türkçe*Yüz Yüze*3*2*75464563454
+BİLM111-2021*Genel Fizik*true*2*2*1*Türkçe*Yüz Yüze*2*0*53453572452
+BİLM181-2009*Genel Matematik I*true*4*6*1*Türkçe*Yüz Yüze*4*0*75345574534
+BİLM191-2009*Turk Dili-I*true*2*2*1*Türkçe*Uzaktan*2*0*77533453422
+BİLM193-2019*Ataturk Ilkeleri ve Inkilap Tarihi-I*true*2*2*1*Türkçe*Uzaktan*2*0*64352432323
+BİLM197-2009*Ingilizce-I*true*3*3*1*Inlizce*Uzaktan*3*0*75363454522
+BİLM104-2022*Lineer Cebir*true*3*6*1*Türkçe*Yüz Yüze*3*0*34554334555
+BİLM106-2022*Programlama II*true*4*7*1*Türkçe*Yüz Yüze*3*2*75464563454
+BİLM182-2009*Genel Matematik II*true*4*6*1*Türkçe*Yüz Yüze*4*0*75345574534
+BİLM186-2022*Elektrik Devreleri*true*2*4*1*Türkçe*Yüz Yüze*2*0*66435463455
+BİLM192-2009*Turk Dili-II*true*2*2*1*Türkçe*Uzaktan*2*0*77533453422
+BİLM194-2019*Ataturk Ilkeleri ve Inkilap Tarihi-II*true*2*2*1*Türkçe*Uzaktan*2*0*64352432323
+BİLM198-2009*Ingilizce-II*true*3*3*1*Inlizce*Uzaktan*3*0*75363454522
+BİLM201-2021*Veri Yapilari*true*4*6*2*Türkçe*Yüz Yüze*3*2*34554334555
+BİLM203-2022*Nesne Tabanli Programlama*true*4*6*2*Türkçe*Yüz Yüze*3*2*24234364355
+BİLM205-2019*Bicimsel Diller ve Ozdevinirler*true*3*5*2*Türkçe*Yüz Yüze*3*0*54332423423
+BİLM223-2022*Mantik Devreleri Tasarimi*true*4*5*2*Türkçe*Yüz Yüze*3*2*88237684283
+BİLM289-2022*Veri Organizasyonu*true*3*5*2*Türkçe*Yüz Yüze*3*0*66575765576
+USD502-2025*Ingilizce Konusma*false*2*3*2*Inlizce*Yüz Yüze*2*0*66128324276
+BİLM202-2021*Programlama Dilleri*true*4*7*2*Türkçe*Yüz Yüze*3*2*66575765576
+BİLM224-2022*Olasilik ve Istatistik*true*3*5*2*Türkçe*Yüz Yüze*3*0*54332423423
+BİLM232-2019*Bilgisayar Mimarileri*true*3*5*2*Türkçe*Yüz Yüze*3*0*34554334555
+BİLM252-2019*Mikrobilgisayar Sistemleri*true*4*6*2*Türkçe*Yüz Yüze*3*2*75464563454
+BİLM288-2022*Sayisal Yontemler*true*3*5*2*Türkçe*Yüz Yüze*2*2*54332423423
+BİLM004-2021*Teknik Olmayan Secmeli I*false*2*2*2*Türkçe*Yüz Yüze*2*0*88237684283
+BİLM301-2019*Bilgisayar Ağları*true*4*6*3*Türkçe*Yüz Yüze*3*2*64234234234
+BİLM311-2019*Mobil Cihazlar Icin Uygulama Gelistirme*true*3*5*3*Türkçe*Yüz Yüze*3*0*88657567343
+BİLM335-2019*Veri Tabanı Yonetim Sistemleri*true*4*6*3*Türkçe*Yüz Yüze*3*2*66575765576
+BİLM337-2019*Isletim Sistemleri*true*3*5*3*Türkçe*Yüz Yüze*3*0*54332423423
+BİLM365-2022*Goruntu Isleme*true*4*6*3*Türkçe*Yüz Yüze*3*2*56343534534
+BİLM005-2021*Teknik Olmayan Secmeli II*false*2*2*3*Türkçe*Yüz Yüze*2*0*44432352343
+BİLM302-2011*Algoritma Analizi*true*3*5*3*Türkçe*Yüz Yüze*3*0*64234234234
+BİLM306-2019*Internet Programciligi*true*4*6*3*Türkçe*Yüz Yüze*3*2*85678745655
+BİLM374-2022*Yapay Zeka*true*4*6*3*Türkçe*Yüz Yüze*3*2*24234364355
+BİLM376-2022*Nesneye Yonelik Yazilim Muhendisligi*true*4*6*3*Türkçe*Yüz Yüze*3*2*66575765576
+BİLM378-2022*Sinyaller ve Sistemler*true*3*5*3*Türkçe*Yüz Yüze*3*0*54332423423
+BİLM006-2021*Teknik Olmayan Secmeli III*false*2*2*3*Türkçe*Yüz Yüze*2*0*77776735467
+BİLM007-2021*Teknik Secmeli Dersler(5)*false*3*25*4*Türkçe*Yüz Yüze*3*0*64234234234
+BİLM077-2023*Zorunlu Dersler(2)*true*3*5*4*Türkçe*Yüz Yüze*0*0*44432352343
+BİLM099-2023*UME(1)*false*5*30*4*Türkçe*Yüz Yüze*0*0*88237684283
+BİLM008-2023*Teknik Secmeli Dersler(5)*false*15*25*4*Türkçe*Yüz Yüze*3*0*64234234234
+BİLM088-2023*Zorunlu Dersler(2)*false*3*5*4*Türkçe*Yüz Yüze*0*0*75464563454
+BİLM888-2023*UME(1)*false*5*30*4*Türkçe*Yüz Yüze*0*0*88237684283
+
+
+
+
+
+
 
 ---------------------------------------------------------------------------------------------------------------
-##stuNum*firstName*lastName*age*classYear*faculty*gpa
+##stuId*firstName*lastName*age*classYear*faculty*gpa
 22400001*Rashid*Yuldashov*25*2*Bilgisayar Mühendisligi*80
 22400002*Ali*Karakurt*21*2*Bilgisayar Mühendisligi*79
 22400003*Ali*Osman*19*2*Bilgisayar Mühendisligi*78
-22400004*Burak*Özkan*21*1*İnşaat Mühendisligi*80
-22400005*Deniz*Arslan*19*1*İşletme*87
-22400006*Elif*Çelik*20*2*İktisat*91
-22400007*Kerem*Şahin*21*3*Hukuk*89
-22400008*Merve*Aydın*22*4*Psikoloji*84
-22400009*Gamze*Polat*25*4*İşletme*85
-224000010*Pelin*Doğan*21*1*İnşaat Mühendisligi*62
+
+
 
 
 ---------------------------------------------------------------------------------------------------------------
 
-&&perNum*firstName*lastName*title*email
-34554334555*Adnan Fatih*Kocamaz*Doç*fatih.kocamaz@inonu.edu.tr
-24234364355*Cengiz*Hark*Dr*cengiz.hark@inonu.edu.tr
-54332423423*Abdullah*Ateş*Doç*abdullah.ates@inonu.edu.tr
-88237684283*Bariş Baykant*Alagöz*baykant.alagoz@inonu.edu.tr
-66575765576*Ahmet Arif*Aydin*Doç*arif.aydin@inonu.edu.tr
+&&perId*firstName*lastName*title*email*web
+34554334555*Adnan Fatih*Kocamaz*Doç*fatih.kocamaz@inonu.edu.tr*http://inonu.edu.tr/akademik/fatih.kocamaz
+24234364355*Cengiz*Hark*Dr*cengiz.hark@inonu.edu.tr*http://inonu.edu.tr/akademik/cengiz.hark
+54332423423*Abdullah*Ateş*Doç*abdullah.ates@inonu.edu.tr*http://inonu.edu.tr/akademik/abdullah.ates
+88237684283*Bariş Baykant*Alagöz*Prof*baykant.alagoz@inonu.edu.tr*http://inonu.edu.tr/akademik/baykant.alagoz
+66575765576*Ahmet Arif*Aydin*Doç*arif.aydin@inonu.edu.tr*http://inonu.edu.tr/akademik/arif.aydin
+34234613423*Davut*Hanbay*Prof*davut.hanbay@inonu.edu.tr*http://inonu.edu.tr/akademik/davut.hanbay
+56343534534*Fatih*Talu*Prof*fatih.talu@inonu.edu.tr*http://inonu.edu.tr/akademik/fatih.talu
+74565464545*Ali*Ari*Doç*ali.ari@inonu.edu.tr*http://inonu.edu.tr/akademik/ali.ari
+64234234234*Abdullah Erhan*Akkaya*Dr*erhan.akkaya@inonu.edu.tr*http://inonu.edu.tr/akademik/erhan.akkaya
+75464563454*Mustafa*Nurmuhammed*Dr*mustafa.nurmuhammed@inonu.edu.tr*http://inonu.edu.tr/akademik/mustafa.nurmuhammed
+63454354232*Edanur Özdemir*Yıldırım*ARGE*edanur.ozdemir@inonu.edu.tr*http://inonu.edu.tr/akademik/edanur.ozdemir
+31123123413*Begüm*Yetişkin*ARGE*begum.yetiskin@inonu.edu.tr*http://inonu.edu.tr/akademik/begum.yetiskin
+87678675657*Büşra*Özcan*ARGE*busra.ozcan@inonu.edu.tr*http://inonu.edu.tr/akademik/busra.ozcan
+65371276537*Taha Burak*Özdemir*ARGE*tahaburak.ozdemir@inonu.edu.tr*http://inonu.edu.tr/akademik/tahaburak.ozdemir
+75363454522*Mehmet*Kodaz*Ögr*mehmet.kodaz@inonu.edu.tr*http://www.inonu.edu.tr/akademik/mehmet.kodaz
+64352432323*Hayrettin Aykut*Dönmez*Ögr*aykut.donmez@inonu.edu.tr*http://avesis.inonu.edu.tr/hayrettinaykut.donmez
+77533453422*Ali Selami*Başoglu*PhD*selami.basoglu@inonu.edu.tr*https://avesis.inonu.edu.tr/selami.basoglu
+75345574534*Ümit*Çakan*Prof*umit.cakan@inonu.edu.tr*http://avesis.inonu.edu.tr/1410
+53453572452*Ahmet*Iskender*PhD*ahmet.iskender@inonu.edu.tr*http://avesis.inonu.edu.tr/ahmet.iskender
+66435463455*Cemal*Keleş*Dr*cemal.keles@inonu.edu.tr*http://www.inonu.edu.tr/akademik/cemal.keles
+66128324276*Mehmet*Temur*PhD*mehmet.temur@inonu.edu.tr*http://avesis.inonu.edu.tr/mehmet.temur
+88657567343*Bilal*Şenol*Prof*bilal.senol@inonu.edu.tr*http://avesis.inonu.edu.tr/bilal.senol
+44432352343*Davut*Hanbay*Prof*davut.hanbay@inonu.edu.tr*http://avesis.inonu.edu.tr/davut.hanbay
+85678745655*Kenan*Ince*Prof*kenan.ince@inonu.edu.tr*http://www.inonu.edu.tr/akademik/kenan.ince
+77776735467*Celaleddin*Yeroğlu*Prof*c.yeroglu@inonu.edu.tr*http://avesis.inonu.edu.tr/c.yeroglu

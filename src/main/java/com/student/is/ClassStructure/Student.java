@@ -1,7 +1,7 @@
 package com.student.is.ClassStructure;
 
 public class Student {
-    public long stuNum;
+    public long stuId;
     public String firstName;
     public String lastName;
     public int age;
@@ -10,15 +10,5 @@ public class Student {
     public double gpa;
 
     public Student(){
-    }
-
-    public Student(long stuNum,String firstName, String lastName, byte age, byte classNo, String faculty, float gpa) {
-        this.stuNum = stuNum;
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.age = age;
-        this.classNo = classNo;
-        this.faculty = faculty;
-        this.gpa = gpa;
     }
 }
