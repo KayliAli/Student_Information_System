@@ -31,12 +31,12 @@
                   <Font name="Arial Bold" size="20.0" />
                </font>
             </Label>
-            <TextField fx:id="login" prefWidth="100.0" promptText="Öğrenci Numarası" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+            <TextField fx:id="login" focusTraversable="false" prefWidth="100.0" promptText="Ögrenci e-posta" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                <font>
                   <Font name="Arial" size="17.0" />
                </font>
             </TextField>
-            <PasswordField fx:id="password" prefHeight="26.0" prefWidth="257.0" promptText="Şifre" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
+            <PasswordField fx:id="password" focusTraversable="false" prefHeight="26.0" prefWidth="257.0" promptText="Şifre" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
                <font>
                   <Font name="Arial" size="17.0" />
                </font>
