@@ -12,7 +12,6 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class LoginController {
-    Authentication authentication = new Authentication();
     public TextField login;
     public TextField password;
 
@@ -36,7 +35,7 @@ public class LoginController {
     public void studentMainPage(ActionEvent event)throws IOException {
         String login = this.login.getText();
         String password = this.password.getText();
-        Boolean status= authentication.checkStudentAuth(login,password);
+        Boolean status= Authentication.checkStudentAuth(login,password);
         if(status) {
             Parent root = FXMLLoader.load(getClass().getResource("/com/student/is/fxml/StudentMainPage.fxml"));
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
