@@ -1,16 +1,23 @@
 package com.student.is.Authentication;
 
 import java.io.*;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.security.NoSuchAlgorithmException;
 
 public class Authentication {
     public static String currentUser;
     public static boolean authenticated;
 
-//    public void main(String[] args){
-//        System.out.println(checkStudentAuth("02240200002@ogr.inonu.edu.tr","12345"));
-//    }
+    public static void main(String[] args){
+        currentUser = "cengiz.hark@inonu.edu.tr";
+        changePassword("rashid");
+    }
 
-    public boolean checkStudentAuth(String login , String password) {
+
+
+    public static boolean checkStudentAuth(String login , String password) {
         try  {
             BufferedReader br = new BufferedReader(new FileReader("src/main/resources/com/student/is/database/auth.bin"));
             String line;
@@ -21,7 +28,7 @@ public class Authentication {
             while ((line = br.readLine()) != null){
                 String loginTemp = line.split(" ")[0];
                 if (loginTemp.equals(login)) {
-                    if (line.split(" ")[1].equals(password)){
+                    if (line.split(" ")[1].equals(Encryption.encryptString(password))){
                         currentUser = loginTemp;
                         authenticated = true;
                         return true;
@@ -33,10 +40,12 @@ public class Authentication {
         }
         catch (IOException e){
             System.out.println("Error reading file!" + e);
+        } catch (NoSuchAlgorithmException e) {
+            throw new RuntimeException(e);
         }
         return false;
     }
-    public boolean checkPersonnelAuth(String login , String password) {
+    public static boolean checkPersonnelAuth(String login , String password) {
         try  {
             BufferedReader br = new BufferedReader(new FileReader("src/main/resources/com/student/is/database/auth.bin"));
             String line;
@@ -45,7 +54,7 @@ public class Authentication {
                     break;
                 String loginTemp = line.split(" ")[0];
                 if (loginTemp.equals(login)) {
-                    if (line.split(" ")[1].equals(password)){
+                    if (line.split(" ")[1].equals(Encryption.encryptString(password))){
                         currentUser = loginTemp;
                         authenticated = true;
                         return true;
@@ -57,8 +66,37 @@ public class Authentication {
         }
         catch (IOException e){
             System.out.println("Error reading file!" + e);
+        } catch (NoSuchAlgorithmException e) {
+            throw new RuntimeException(e);
         }
         return false;
+    }
+
+    public static void changePassword(String password) {
+        try {
+            BufferedReader br = new BufferedReader(new FileReader("src/main/resources/com/student/is/database/auth.bin"));
+            BufferedWriter wr = new BufferedWriter(new FileWriter("src/main/resources/com/student/is/database/auth_2.bin"));
+            String line;
+            while ((line = br.readLine()) != null) {
+                String loginTemp = line.split(" ")[0];
+                if (loginTemp.equals(currentUser)) {
+                    line = loginTemp + " " + Encryption.encryptString(password);
+                    wr.write(line + "\n");
+                    continue;
+                }
+                wr.write(line + "\n");
+            }
+            br.close();
+            wr.close();
+            File f1 = new File("src/main/resources/com/student/is/database/auth.bin");
+            f1.delete();
+            File f2 = new File("src/main/resources/com/student/is/database/auth_2.bin");
+            f2.renameTo(new File("src/main/resources/com/student/is/database/auth.bin"));
+        } catch (IOException e) {
+            System.out.println("Error reading file!" + e);
+        } catch (NoSuchAlgorithmException e) {
+            throw new RuntimeException(e);
+        }
     }
 }
 
