@@ -1,12 +1,12 @@
 module com.student.is {
     requires javafx.controls;
     requires javafx.fxml;
-
     requires org.controlsfx.controls;
     requires org.kordamp.bootstrapfx.core;
     requires java.desktop;
     requires javafx.base;
     requires javafx.graphics;
+    requires jakarta.mail;
 
     opens com.student.is to javafx.fxml;
     exports com.student.is;
