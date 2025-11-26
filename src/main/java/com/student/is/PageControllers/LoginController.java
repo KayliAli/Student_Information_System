@@ -46,8 +46,23 @@ public class LoginController {
         else{
             System.out.println("Hatalı kullanıcı adı veya şifre!!");
         }
+
         this.login.clear();
         this.password.clear();
         Database.createTemp();
+    }
+
+    @FXML
+    public void backButtonAction(ActionEvent event) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/student/is/fxml/Welcome.fxml"));
+        Parent root = loader.load();
+        Scene oncekiSahne = new Scene(root);
+
+        Node source = (Node) event.getSource();
+        Stage mevcutStage = (Stage) source.getScene().getWindow();
+
+        mevcutStage.setScene(oncekiSahne);
+        mevcutStage.show();
+
     }
 }

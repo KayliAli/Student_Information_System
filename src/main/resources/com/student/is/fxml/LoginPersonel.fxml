@@ -6,8 +6,6 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
@@ -33,17 +31,17 @@
                   <Font name="Arial Bold" size="20.0" />
                </font>
             </Label>
-            <TextField fx:id="login" prefWidth="100.0" promptText="Öğrenci Numarası" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+            <TextField prefWidth="100.0" promptText="Kullanıcı Adı veya E-Posta" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                <font>
                   <Font name="Arial" size="17.0" />
                </font>
             </TextField>
-            <PasswordField fx:id="password" prefHeight="26.0" prefWidth="257.0" promptText="Şifre" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
+            <PasswordField prefHeight="26.0" prefWidth="257.0" promptText="Şifre" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
                <font>
                   <Font name="Arial" size="17.0" />
                </font>
             </PasswordField>
-            <Button mnemonicParsing="false" onAction="#studentPage" style="-fx-background-color: white; -fx-background-radius: 30;" text="Giriş Yap" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+            <Button mnemonicParsing="false" style="-fx-background-color: white; -fx-background-radius: 30;" text="Giriş Yap" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2">
                <font>
                   <Font name="Arial" size="22.0" />
                </font>
@@ -51,7 +49,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <Label text="Öğrenci" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">
+            <Label text="Akademisyen" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">
                <font>
                   <Font name="Arial Bold" size="20.0" />
                </font>
@@ -61,14 +59,6 @@
             </Label>
          </children>
       </GridPane>
-      <Button layoutX="60.0" layoutY="62.0" mnemonicParsing="false" onAction="#backButtonAction" styleClass="button-back" stylesheets="@../css/style.css">
-         <graphic>
-            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../images/left-arrow-in-circular-button-black-symbol%20(1).png" />
-               </image>
-            </ImageView>
-         </graphic>
-      </Button>
+      <Button layoutX="52.0" layoutY="62.0" mnemonicParsing="false" onAction="#backButtonAction" text="GERİ" />
    </children>
 </AnchorPane>
