@@ -11,7 +11,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1280.0" style="-fx-background-color: #fff3f2;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <GridPane prefHeight="768.0" prefWidth="250.0" style="-fx-background-color: #580519;">
+      <GridPane prefHeight="768.0" prefWidth="250.0" style="-fx-background-color: #122a61;">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" maxWidth="300.0" minWidth="10.0" prefWidth="250.0" />
         </columnConstraints>
@@ -26,7 +26,12 @@
             <RowConstraints minHeight="10.0" prefHeight="10.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Button mnemonicParsing="false" prefHeight="74.0" prefWidth="250.0" style="-fx-background-color: #580519;" text="Not Listesi" textFill="WHITE" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="BOTTOM">
+            <Label text="Taha Burak Özdemir" textAlignment="CENTER" textFill="WHITE" wrapText="true" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="Arial" size="22.0" />
+               </font>
+            </Label>
+            <Button mnemonicParsing="false" prefHeight="75.0" prefWidth="250.0" style="-fx-background-color: #122a61;" text="Devamsızlık İşlemleri" textFill="WHITE" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="BOTTOM">
                <font>
                   <Font name="Arial Bold" size="19.0" />
                </font>
@@ -34,7 +39,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <Button mnemonicParsing="false" prefHeight="75.0" prefWidth="250.0" style="-fx-background-color: #580519;" text="Devamsızlık Durumu" textFill="WHITE" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+            <Button mnemonicParsing="false" prefHeight="75.0" prefWidth="250.0" style="-fx-background-color: #122a61;" text="Not İşlemleri" textFill="WHITE" GridPane.rowIndex="2">
                <font>
                   <Font name="Arial Bold" size="19.0" />
                </font>
@@ -42,23 +47,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <Button mnemonicParsing="false" prefHeight="75.0" prefWidth="250.0" style="-fx-background-color: #580519;" text="Öğrenci Bilgileri" textFill="WHITE" GridPane.rowIndex="2">
-               <font>
-                  <Font name="Arial Bold" size="19.0" />
-               </font>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-            </Button>
-            <Button mnemonicParsing="false" prefHeight="75.0" prefWidth="250.0" style="-fx-background-color: #580519;" text="Akademik Takvim" textFill="WHITE" GridPane.rowIndex="5">
-               <font>
-                  <Font name="Arial Bold" size="19.0" />
-               </font>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-            </Button>
-            <Button mnemonicParsing="false" prefHeight="75.0" prefWidth="250.0" style="-fx-background-color: #580519;" text="Çıkış Yap" textFill="WHITE" GridPane.rowIndex="7">
+            <Button mnemonicParsing="false" prefHeight="75.0" prefWidth="250.0" style="-fx-background-color: #122a61;" text="Çıkış Yap" textFill="WHITE" GridPane.rowIndex="7">
                <font>
                   <Font name="Arial Bold" size="19.0" />
                </font>
@@ -71,19 +60,6 @@
                   <Font name="Arial Bold" size="22.0" />
                </font>
             </Label>
-            <Label text="Ali KARAKURT" textAlignment="CENTER" textFill="WHITE" wrapText="true" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
-               <font>
-                  <Font name="Arial" size="22.0" />
-               </font>
-            </Label>
-            <Button mnemonicParsing="false" prefHeight="75.0" prefWidth="250.0" style="-fx-background-color: #580519;" text="Akademisyenler" textFill="WHITE" GridPane.rowIndex="6">
-               <font>
-                  <Font name="Arial Bold" size="19.0" />
-               </font>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-            </Button>
          </children>
       </GridPane>
    </children>

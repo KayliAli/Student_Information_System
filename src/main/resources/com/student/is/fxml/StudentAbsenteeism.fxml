@@ -29,7 +29,7 @@
             <RowConstraints minHeight="10.0" prefHeight="10.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Button mnemonicParsing="false" prefHeight="74.0" prefWidth="250.0" onAction="#ListOfGradesButtonAction" style="-fx-background-color: #580519;" text="Not Listesi" textFill="WHITE" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="BOTTOM">
+            <Button mnemonicParsing="false" onAction="#ListOfGradesButtonAction" prefHeight="74.0" prefWidth="250.0" style="-fx-background-color: #580519;" text="Not Listesi" textFill="WHITE" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="BOTTOM">
                <font>
                   <Font name="Arial Bold" size="19.0" />
                </font>
@@ -37,7 +37,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <Button mnemonicParsing="false" prefHeight="75.0" prefWidth="250.0"  style="-fx-background-color: #fff3f2;" text="Devamsızlık Durumu" textFill="#580519" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+            <Button mnemonicParsing="false" prefHeight="75.0" prefWidth="250.0" style="-fx-background-color: #fff3f2;" text="Devamsızlık Durumu" textFill="#580519" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
                <font>
                   <Font name="Arial Bold" size="19.0" />
                </font>
@@ -58,7 +58,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <Button mnemonicParsing="false" prefHeight="75.0" prefWidth="250.0" onAction="#AcademicCalendarButtonAction" style="-fx-background-color: #580519;" text="Akademik Takvim" textFill="WHITE" GridPane.rowIndex="5">
+            <Button mnemonicParsing="false" onAction="#AcademicCalendarButtonAction" prefHeight="75.0" prefWidth="250.0" style="-fx-background-color: #580519;" text="Akademik Takvim" textFill="WHITE" GridPane.rowIndex="5">
                <font>
                   <Font name="Arial Bold" size="19.0" />
                </font>
@@ -66,7 +66,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <Button mnemonicParsing="false" prefHeight="75.0" prefWidth="250.0" onAction="#exitButtonAction" style="-fx-background-color: #580519;" text="Çıkış Yap" textFill="WHITE" GridPane.rowIndex="7">
+            <Button mnemonicParsing="false" onAction="#exitButtonAction" prefHeight="75.0" prefWidth="250.0" style="-fx-background-color: #580519;" text="Çıkış Yap" textFill="WHITE" GridPane.rowIndex="7">
                <font>
                   <Font name="Arial Bold" size="19.0" />
                </font>
@@ -79,16 +79,24 @@
                   <Font name="Arial Bold" size="22.0" />
                </font>
             </Label>
+            <Button mnemonicParsing="false" prefHeight="75.0" prefWidth="250.0" style="-fx-background-color: #580519;" text="Akademisyenler" textFill="WHITE" GridPane.rowIndex="6">
+               <font>
+                  <Font name="Arial Bold" size="19.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
          </children>
       </GridPane>
       <TableView layoutX="250.0" layoutY="49.0" prefHeight="718.0" prefWidth="1030.0" style="-fx-background-color: #fff3f2;">
         <columns>
-          <TableColumn editable="false" prefWidth="179.19998168945312" resizable="false" sortable="false" text="Ders Kodu" />
-          <TableColumn editable="false" prefWidth="221.60006713867188" resizable="false" sortable="false" text="Ders Adı" />
-            <TableColumn editable="false" prefWidth="208.0" resizable="false" sortable="false" text="Teorik + Uygulama Saati" />
-            <TableColumn editable="false" prefWidth="100.00006103515625" resizable="false" sortable="false" text="Kredi" />
-            <TableColumn editable="false" prefWidth="145.60003662109375" resizable="false" sortable="false" text="AKTS" />
-            <TableColumn editable="false" prefWidth="172.8000244140626" resizable="false" sortable="false" text="Toplam Devamsızlık Saati" />
+          <TableColumn editable="false" prefWidth="179.19998168945312" sortable="false" text="Ders Kodu" />
+          <TableColumn editable="false" prefWidth="221.60006713867188" sortable="false" text="Ders Adı" />
+            <TableColumn editable="false" prefWidth="208.0" sortable="false" text="Teorik + Uygulama Saati" />
+            <TableColumn editable="false" prefWidth="100.00006103515625" sortable="false" text="Kredi" />
+            <TableColumn editable="false" prefWidth="145.60003662109375" sortable="false" text="AKTS" />
+            <TableColumn editable="false" prefWidth="172.8000244140626" sortable="false" text="Toplam Devamsızlık Saati" />
         </columns>
       </TableView>
       <Label layoutX="250.0" layoutY="9.0" prefHeight="34.0" prefWidth="250.0" text="Devamsızlık Durumu">
