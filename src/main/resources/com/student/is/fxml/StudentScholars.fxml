@@ -4,6 +4,7 @@
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -12,11 +13,11 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1280.0" style="-fx-background-color: #fff3f2;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.student.is.PageControllers.StudentPageController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1280.0" style="-fx-background-color: #fff3f2;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <GridPane prefHeight="768.0" prefWidth="250.0" style="-fx-background-color: #580519;">
         <columnConstraints>
-          <ColumnConstraints hgrow="SOMETIMES" maxWidth="250.0" minWidth="10.0" prefWidth="250.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="300.0" minWidth="10.0" prefWidth="250.0" />
         </columnConstraints>
         <rowConstraints>
           <RowConstraints minHeight="10.0" prefHeight="100.0" vgrow="SOMETIMES" />
@@ -29,7 +30,7 @@
             <RowConstraints minHeight="10.0" prefHeight="10.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Button mnemonicParsing="false" onAction="#ListOfGradesButtonAction" prefHeight="74.0" prefWidth="250.0" style="-fx-background-color: #580519;" text="Not Listesi" textFill="WHITE" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="BOTTOM">
+            <Button mnemonicParsing="false" prefHeight="74.0" prefWidth="250.0" style="-fx-background-color: #580519;" text="Not Listesi" textFill="WHITE" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="BOTTOM">
                <font>
                   <Font name="Arial Bold" size="19.0" />
                </font>
@@ -37,19 +38,14 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <Button mnemonicParsing="false" prefHeight="75.0" prefWidth="250.0" style="-fx-background-color: #fff3f2;" text="Devamsızlık Durumu" textFill="#580519" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+            <Button mnemonicParsing="false" prefHeight="75.0" prefWidth="250.0" style="-fx-background-color: #580519;" text="Devamsızlık Durumu" textFill="WHITE" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
                <font>
                   <Font name="Arial Bold" size="19.0" />
                </font>
                <cursor>
-                  <Cursor fx:constant="DEFAULT" />
+                  <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <Label text="Ali KARAKURT" textAlignment="CENTER" textFill="WHITE" wrapText="true" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
-               <font>
-                  <Font name="Arial" size="22.0" />
-               </font>
-            </Label>
             <Button mnemonicParsing="false" prefHeight="75.0" prefWidth="250.0" style="-fx-background-color: #580519;" text="Öğrenci Bilgileri" textFill="WHITE" GridPane.rowIndex="2">
                <font>
                   <Font name="Arial Bold" size="19.0" />
@@ -58,7 +54,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <Button mnemonicParsing="false" onAction="#AcademicCalendarButtonAction" prefHeight="75.0" prefWidth="250.0" style="-fx-background-color: #580519;" text="Akademik Takvim" textFill="WHITE" GridPane.rowIndex="5">
+            <Button mnemonicParsing="false" prefHeight="75.0" prefWidth="250.0" style="-fx-background-color: #580519;" text="Akademik Takvim" textFill="WHITE" GridPane.rowIndex="5">
                <font>
                   <Font name="Arial Bold" size="19.0" />
                </font>
@@ -66,7 +62,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <Button mnemonicParsing="false" onAction="#exitButtonAction" prefHeight="75.0" prefWidth="250.0" style="-fx-background-color: #580519;" text="Çıkış Yap" textFill="WHITE" GridPane.rowIndex="7">
+            <Button mnemonicParsing="false" prefHeight="75.0" prefWidth="250.0" style="-fx-background-color: #580519;" text="Çıkış Yap" textFill="WHITE" GridPane.rowIndex="7">
                <font>
                   <Font name="Arial Bold" size="19.0" />
                </font>
@@ -74,12 +70,17 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <Label text="AORA Üniversitesi Öğrenci Bilgi Sistemi" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+            <Label text="AORA Üniversitesi Öğrenci Bilgi Sistemi" textAlignment="CENTER" textFill="WHITE" wrapText="true" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                <font>
                   <Font name="Arial Bold" size="22.0" />
                </font>
             </Label>
-            <Button mnemonicParsing="false" prefHeight="75.0" prefWidth="250.0" style="-fx-background-color: #580519;" text="Akademisyenler" textFill="WHITE" GridPane.rowIndex="6">
+            <Label text="Ali KARAKURT" textAlignment="CENTER" textFill="WHITE" wrapText="true" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="Arial" size="22.0" />
+               </font>
+            </Label>
+            <Button mnemonicParsing="false" prefHeight="75.0" prefWidth="250.0" style="-fx-background-color: #fff3f2;" text="Akademisyenler" textFill="#580519" GridPane.rowIndex="6">
                <font>
                   <Font name="Arial Bold" size="19.0" />
                </font>
@@ -89,17 +90,21 @@
             </Button>
          </children>
       </GridPane>
-      <TableView layoutX="250.0" layoutY="49.0" prefHeight="718.0" prefWidth="1030.0" style="-fx-background-color: #fff3f2;">
-        <columns>
-          <TableColumn editable="false" prefWidth="179.19998168945312" sortable="false" text="Ders Kodu" />
-          <TableColumn editable="false" prefWidth="221.60006713867188" sortable="false" text="Ders Adı" />
-            <TableColumn editable="false" prefWidth="208.0" sortable="false" text="Teorik + Uygulama Saati" />
-            <TableColumn editable="false" prefWidth="100.00006103515625" sortable="false" text="Kredi" />
-            <TableColumn editable="false" prefWidth="145.60003662109375" sortable="false" text="AKTS" />
-            <TableColumn editable="false" prefWidth="172.8000244140626" sortable="false" text="Toplam Devamsızlık Saati" />
-        </columns>
-      </TableView>
-      <Label layoutX="250.0" layoutY="9.0" prefHeight="34.0" prefWidth="250.0" text="Devamsızlık Durumu">
+      <ScrollPane layoutX="250.0" layoutY="49.0" prefHeight="718.0" prefWidth="1030.0">
+         <content>
+            <TableView prefHeight="718.0" prefWidth="1030.0">
+              <columns>
+                <TableColumn editable="false" prefWidth="162.40002137422562" sortable="false" text="Ad" />
+                <TableColumn editable="false" prefWidth="148.80003356933594" sortable="false" text="Soyad" />
+                  <TableColumn editable="false" prefWidth="92.800048828125" sortable="false" text="Ünvan" />
+                  <TableColumn editable="false" prefWidth="192.79998779296875" sortable="false" text="E-Posta" />
+                  <TableColumn editable="false" minWidth="0.0" prefWidth="228.79998779296875" sortable="false" text="Web Sitesi" />
+                  <TableColumn editable="false" prefWidth="201.60001220703134" sortable="false" text="Ofis Saatleri" />
+              </columns>
+            </TableView>
+         </content>
+      </ScrollPane>
+      <Label layoutX="250.0" layoutY="9.0" prefHeight="34.0" prefWidth="250.0" text="Akademisyenler">
          <font>
             <Font name="Arial Bold" size="22.0" />
          </font>

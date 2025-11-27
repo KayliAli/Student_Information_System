@@ -824,7 +824,7 @@
             <RowConstraints minHeight="10.0" prefHeight="10.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Button mnemonicParsing="false" prefHeight="74.0" prefWidth="250.0" onAction="#ListOfGradesButtonAction" style="-fx-background-color: #580519;" text="Not Listesi" textFill="WHITE" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="BOTTOM">
+            <Button mnemonicParsing="false" onAction="#ListOfGradesButtonAction" prefHeight="74.0" prefWidth="250.0" style="-fx-background-color: #580519;" text="Not Listesi" textFill="WHITE" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="BOTTOM">
                <font>
                   <Font name="Arial Bold" size="19.0" />
                </font>
@@ -832,7 +832,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <Button mnemonicParsing="false" prefHeight="75.0" prefWidth="250.0" onAction="#AbsenteeismButtonAction" style="-fx-background-color: #580519;" text="Devamsızlık Durumu" textFill="WHITE" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+            <Button mnemonicParsing="false" onAction="#AbsenteeismButtonAction" prefHeight="75.0" prefWidth="250.0" style="-fx-background-color: #580519;" text="Devamsızlık Durumu" textFill="WHITE" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
                <font>
                   <Font name="Arial Bold" size="19.0" />
                </font>
@@ -848,7 +848,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <Button mnemonicParsing="false" prefHeight="75.0" prefWidth="250.0" onAction="#AcademicCalendarButtonAction" style="-fx-background-color: #fff3f2;" text="Akademik Takvim" textFill="#580519" GridPane.rowIndex="5">
+            <Button mnemonicParsing="false" onAction="#AcademicCalendarButtonAction" prefHeight="75.0" prefWidth="250.0" style="-fx-background-color: #fff3f2;" text="Akademik Takvim" textFill="#580519" GridPane.rowIndex="5">
                <font>
                   <Font name="Arial Bold" size="19.0" />
                </font>
@@ -856,7 +856,7 @@
                   <Cursor fx:constant="DEFAULT" />
                </cursor>
             </Button>
-            <Button mnemonicParsing="false" prefHeight="75.0" prefWidth="250.0" onAction="#exitButtonAction" style="-fx-background-color: #580519;" text="Çıkış Yap" textFill="WHITE" GridPane.rowIndex="7">
+            <Button mnemonicParsing="false" onAction="#exitButtonAction" prefHeight="75.0" prefWidth="250.0" style="-fx-background-color: #580519;" text="Çıkış Yap" textFill="WHITE" GridPane.rowIndex="7">
                <font>
                   <Font name="Arial Bold" size="19.0" />
                </font>
@@ -874,9 +874,17 @@
                   <Font name="Arial" size="22.0" />
                </font>
             </Label>
+            <Button mnemonicParsing="false" prefHeight="75.0" prefWidth="250.0" style="-fx-background-color: #580519;" text="Akademisyenler" textFill="WHITE" GridPane.rowIndex="6">
+               <font>
+                  <Font name="Arial Bold" size="19.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
          </children>
       </GridPane>
-      <Label layoutX="250.0" layoutY="6.0" prefHeight="34.0" prefWidth="250.0" text="Akademik Takvim">
+      <Label layoutX="250.0" layoutY="9.0" prefHeight="34.0" prefWidth="250.0" text="Akademik Takvim">
          <font>
             <Font name="Arial Bold" size="22.0" />
          </font>
@@ -884,7 +892,7 @@
             <Insets left="20.0" />
          </padding>
       </Label>
-      <Button layoutX="1104.0" layoutY="10.0" mnemonicParsing="false" onAction="#studentMainBackButtonAction" style="-fx-background-color: #580519; -fx-background-radius: 15;" text="Ana Menüye Dön" textFill="WHITE">
+      <Button layoutX="1112.0" layoutY="14.0" mnemonicParsing="false" onAction="#studentMainBackButtonAction" style="-fx-background-color: #580519; -fx-background-radius: 15;" text="Ana Menüye Dön" textFill="WHITE">
          <font>
             <Font name="Arial Bold" size="14.0" />
          </font>
