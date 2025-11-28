@@ -31,17 +31,17 @@
                   <Font name="Arial Bold" size="20.0" />
                </font>
             </Label>
-            <TextField prefWidth="100.0" promptText="Kullanıcı Adı" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+            <TextField fx:id="personelLogin" prefWidth="100.0" promptText="Kullanıcı Adı" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                <font>
                   <Font name="Arial" size="17.0" />
                </font>
             </TextField>
-            <PasswordField prefHeight="26.0" prefWidth="257.0" promptText="Şifre" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
+            <PasswordField fx:id="personelPassword" prefHeight="26.0" prefWidth="257.0" promptText="Şifre" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
                <font>
                   <Font name="Arial" size="17.0" />
                </font>
             </PasswordField>
-            <Button mnemonicParsing="false" style="-fx-background-color: white; -fx-background-radius: 30;" text="Giriş Yap" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+            <Button mnemonicParsing="false" onAction="#personelMainPage" style="-fx-background-color: white; -fx-background-radius: 30;" text="Giriş Yap" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2">
                <font>
                   <Font name="Arial" size="22.0" />
                </font>
@@ -57,7 +57,7 @@
                   <Insets />
                </GridPane.margin>
             </Label>
-            <Button mnemonicParsing="false" style="-fx-background-color: white; -fx-background-radius: 15;" text="Şifremi Unuttum" textAlignment="CENTER" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+            <Button mnemonicParsing="false" onAction="#forgotPasswordButtonAction" style="-fx-background-color: white; -fx-background-radius: 15;" text="Şifremi Unuttum" textAlignment="CENTER" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2">
                <font>
                   <Font name="Arial Bold" size="14.0" />
                </font>

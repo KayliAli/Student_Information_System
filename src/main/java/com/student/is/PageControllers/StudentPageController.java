@@ -41,7 +41,15 @@ public class StudentPageController {
         stage.setScene(scene);
         stage.show();
     }
-    public void studentMainBackButtonAction(ActionEvent event) throws IOException,IOException{
+    public void ScholarsButtonAction(ActionEvent event) throws IOException,IOException{
+        Parent root = FXMLLoader.load(getClass().getResource("/com/student/is/fxml/StudentScholars.fxml"));
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    public void studentMainBackButtonAction(ActionEvent event) throws IOException, IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/student/is/fxml/StudentMainPage.fxml"));
         Parent root = loader.load();
         Scene oncekiSahne = new Scene(root);
@@ -52,4 +60,5 @@ public class StudentPageController {
         mevcutStage.setScene(oncekiSahne);
         mevcutStage.show();
     }
+
 }

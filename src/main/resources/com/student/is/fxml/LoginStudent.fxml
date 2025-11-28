@@ -31,12 +31,12 @@
                   <Font name="Arial Bold" size="20.0" />
                </font>
             </Label>
-            <TextField fx:id="login" focusTraversable="false" prefWidth="100.0" promptText="Ögrenci E-Posta" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+            <TextField fx:id="studentLogin" focusTraversable="false" prefWidth="100.0" promptText="Ögrenci E-Posta" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                <font>
                   <Font name="Arial" size="17.0" />
                </font>
             </TextField>
-            <PasswordField fx:id="password" focusTraversable="false" prefHeight="26.0" prefWidth="257.0" promptText="Şifre" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
+            <PasswordField fx:id="studentPassword" focusTraversable="false" prefHeight="26.0" prefWidth="257.0" promptText="Şifre" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
                <font>
                   <Font name="Arial" size="17.0" />
                </font>
@@ -57,7 +57,7 @@
                   <Insets />
                </GridPane.margin>
             </Label>
-            <Button mnemonicParsing="false" style="-fx-background-color: white; -fx-background-radius: 15;" text="Şifremi Unuttum" textAlignment="CENTER" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+            <Button mnemonicParsing="false" onAction="#forgotPasswordButtonAction" style="-fx-background-color: white; -fx-background-radius: 15;" text="Şifremi Unuttum" textAlignment="CENTER" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                <font>
                   <Font name="Arial Bold" size="14.0" />
                </font>

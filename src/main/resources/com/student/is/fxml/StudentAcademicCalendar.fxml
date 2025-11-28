@@ -874,7 +874,7 @@
                   <Font name="Arial" size="22.0" />
                </font>
             </Label>
-            <Button mnemonicParsing="false" prefHeight="75.0" prefWidth="250.0" style="-fx-background-color: #580519;" text="Akademisyenler" textFill="WHITE" GridPane.rowIndex="6">
+            <Button mnemonicParsing="false" prefHeight="75.0" prefWidth="250.0" onAction="#ScholarsButtonAction" style="-fx-background-color: #580519;" text="Akademisyenler" textFill="WHITE" GridPane.rowIndex="6">
                <font>
                   <Font name="Arial Bold" size="19.0" />
                </font>
