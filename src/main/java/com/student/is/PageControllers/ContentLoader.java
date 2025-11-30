@@ -24,7 +24,7 @@ public class ContentLoader {
 
     public static void loadPage(String fxmlAdress) {
         if (currentMainContentPane == null) {
-            System.out.println("Hata: Ana içerik AnchorPane ayarlanmadı! Base Controller'ın initialize() metodunu kontrol edin.");
+            System.out.println("Hata: Ana içerik AnchorPane ayarlanmadı!");
             return;
         }
         try {
