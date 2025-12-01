@@ -3,6 +3,7 @@ package com.student.is.PageControllers.StudentPage;
 import com.student.is.Authentication.Authentication;
 import com.student.is.ClassStructure.Lecture;
 import com.student.is.ClassStructure.Student;
+import com.student.is.ClassStructure.studentGradeList;
 import com.student.is.PageControllers.ContentLoader;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -13,31 +14,32 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class GradeListController {
 
-    @FXML private TableView<Lecture> lectureGradeTable;
-    @FXML private TableColumn<Lecture, String> lectureCodeColumn;
-    @FXML private TableColumn<Lecture, String> lectureNameColumn;
-    @FXML private TableColumn<Lecture, String> lectureStatusColumn;
-    @FXML private TableColumn<Lecture, String> visaGradeColumn;
-    @FXML private TableColumn<Lecture, String> finalGradeColumn;
-    @FXML private TableColumn<Lecture, String> makeUpGradeColumn;
-    @FXML private TableColumn<Lecture, String> averageColumn;
-    @FXML private TableColumn<Lecture, String> letterGradeColumn;
-    @FXML private TableColumn<Lecture, String> statusColumn;
+    @FXML private TableView<studentGradeList> lectureGradeTable;
+    @FXML private TableColumn<studentGradeList, String> lectureCodeColumn;
+    @FXML private TableColumn<studentGradeList, String> lectureNameColumn;
+    @FXML private TableColumn<studentGradeList, String> lectureStatusColumn;
+    @FXML private TableColumn<studentGradeList, Double> visaGradeColumn;
+    @FXML private TableColumn<studentGradeList, Double> finalGradeColumn;
+    @FXML private TableColumn<studentGradeList, Double> makeUpGradeColumn;
+    @FXML private TableColumn<studentGradeList, Double> averageColumn;
+    @FXML private TableColumn<studentGradeList, String> letterGradeColumn;
+    @FXML private TableColumn<studentGradeList, String> statusColumn;
 
     public void initialize(){
 
-        lectureCodeColumn.setCellValueFactory(new PropertyValueFactory<>("lectureCode"));
-        lectureNameColumn.setCellValueFactory(new PropertyValueFactory<>("lectureName"));
-        lectureStatusColumn.setCellValueFactory(new PropertyValueFactory<>("Sonuçlandırıldı"));
-        visaGradeColumn.setCellValueFactory(new PropertyValueFactory<>("lectureAKTS"));
-        finalGradeColumn.setCellValueFactory(new PropertyValueFactory<>("lectureApplication"));
-        makeUpGradeColumn.setCellValueFactory(new PropertyValueFactory<>("lectureType"));
-        averageColumn.setCellValueFactory(new PropertyValueFactory<>("lectureLang"));
-        letterGradeColumn.setCellValueFactory(new PropertyValueFactory<>("lectureClass"));
-        statusColumn.setCellValueFactory(new PropertyValueFactory<>("lectureTheory"));
+        lectureCodeColumn.setCellValueFactory(new PropertyValueFactory<>("LectureCode"));
+        lectureNameColumn.setCellValueFactory(new PropertyValueFactory<>("LectureName"));
+        lectureStatusColumn.setCellValueFactory(new PropertyValueFactory<>("LectureStatus"));
+        visaGradeColumn.setCellValueFactory(new PropertyValueFactory<>("vizeNote"));
+        finalGradeColumn.setCellValueFactory(new PropertyValueFactory<>("finalNote"));
+        makeUpGradeColumn.setCellValueFactory(new PropertyValueFactory<>("makeUpNote"));
+        averageColumn.setCellValueFactory(new PropertyValueFactory<>("averageNote"));
+        letterGradeColumn.setCellValueFactory(new PropertyValueFactory<>("letterNote"));
+        statusColumn.setCellValueFactory(new PropertyValueFactory<>("status"));
 
         loadData();
     }
@@ -45,12 +47,41 @@ public class GradeListController {
         Student user = Authentication.currentStudentUser;
 
         ArrayList<Lecture> lectures = user.getLectures();
+        HashMap<String, String> stuNotes = user.getStuNotes();
 
-        ObservableList<Lecture> observableData = FXCollections.observableArrayList(lectures);
-        lectureGradeTable.setItems(observableData);
+        ObservableList<studentGradeList> Data = FXCollections.observableArrayList();
 
+        for (Lecture lecture : lectures) {
+            String lectureCode = lecture.getLectureCode();
+            String lectureName = lecture.getLectureName();
 
+            double vizeNote=0.0;
+            double finalNote=0.0;
+            double makeUpNote=0.0;   // büt notu stunote içinde bulunmuyor
+            double averageNote=0.0;
+            String lectureStatus="Sonuçlandırıldı";
+            String letterNote="A1";
+            String status;
 
+            String lectureNote = stuNotes.get(lectureCode);
+            if (lectureNote != null) {
+
+                String[] lectureNoteArray = lectureNote.split(",");
+                vizeNote = Double.parseDouble(lectureNoteArray[0]);
+                finalNote = Double.parseDouble(lectureNoteArray[1]);
+
+                averageNote = ((vizeNote*0.4) + (finalNote*0.6));
+            }
+            if(averageNote>=50){
+                status="Geçti";
+            }
+            else{
+                status="Kaldı";
+            }
+            studentGradeList yeni = new studentGradeList(lectureCode,lectureName,lectureStatus,letterNote,status,vizeNote,finalNote,makeUpNote,averageNote);
+            Data.add(yeni);
+        }
+        lectureGradeTable.setItems(Data);
 
     }
     public void BackToMainButtonAction(ActionEvent event) {
