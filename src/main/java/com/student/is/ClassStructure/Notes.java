@@ -1,7 +1,5 @@
 package com.student.is.ClassStructure;
 
-import com.student.is.DataManagement.Database;
-
 public class Notes {
     int fall1;
     int fall2;
@@ -14,6 +12,4 @@ public class Notes {
         this.spring1 = Integer.parseInt(notes.substring(8,10));
         this.spring2 = Integer.parseInt(notes.substring(11,13));
     }
-
 }
-
