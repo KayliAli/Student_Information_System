@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1030.0" style="-fx-background-color: #fff3f2;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.student.is.PageControllers.ScholarPage.DashboardController">
    <children>
+      <ImageView fitHeight="776.0" fitWidth="1036.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true">
+         <image>
+            <Image url="@../images/Scholar_Absentism.jpg" />
+         </image>
+      </ImageView>
       <Label layoutX="335.0" layoutY="367.0" text="Akademisyen Ana Sayfası">
          <font>
             <Font name="Arial Bold" size="29.0" />

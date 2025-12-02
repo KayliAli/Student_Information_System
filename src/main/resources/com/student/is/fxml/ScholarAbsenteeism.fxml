@@ -11,12 +11,19 @@
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1030.0" style="-fx-background-color: #fff3f2;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.student.is.PageControllers.ScholarPage.AbsenteeismOperationController">
    <children>
-      <MenuButton alignment="CENTER" contentDisplay="RIGHT" layoutX="18.0" layoutY="112.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" prefHeight="36.0" prefWidth="238.0" text="Ders Seçiniz">
+      <ImageView fitHeight="775.0" fitWidth="1030.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true">
+         <image>
+            <Image url="@../images/Scholar_Absentism.jpg" />
+         </image>
+      </ImageView>
+      <MenuButton alignment="CENTER" contentDisplay="RIGHT" layoutX="63.0" layoutY="112.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" prefHeight="26.0" prefWidth="193.0" text="Ders Seçiniz">
         <items>
           <MenuItem mnemonicParsing="false" text="Lineer Cebir" />
           <MenuItem mnemonicParsing="false" text="Veri Yapıları" />
@@ -28,7 +35,7 @@
             <Font name="Arial Bold" size="15.0" />
          </font>
       </MenuButton>
-      <Button layoutX="862.0" layoutY="14.0" mnemonicParsing="false" onAction="#BackToMainButtonAction" style="-fx-background-color: #122a61; -fx-background-radius: 15;" text="Ana Menüye Dön" textFill="WHITE">
+      <Button blendMode="OVERLAY" layoutX="839.0" layoutY="31.0" mnemonicParsing="false" onAction="#BackToMainButtonAction" style="-fx-background-color: #122a61; -fx-background-radius: 15;" text="Ana Menüye Dön" textFill="WHITE">
          <font>
             <Font name="Arial Bold" size="14.0" />
          </font>
@@ -36,12 +43,12 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <TextField layoutX="66.0" layoutY="344.0">
+      <TextField focusTraversable="false" layoutX="63.0" layoutY="176.0" prefHeight="26.0" prefWidth="250.0">
          <font>
             <Font name="Arial Bold" size="14.0" />
          </font>
       </TextField>
-      <Button layoutX="266.0" layoutY="343.0" mnemonicParsing="false" text="Ara">
+      <Button layoutX="323.0" layoutY="176.0" mnemonicParsing="false" text="Ara">
          <font>
             <Font name="Arial Bold" size="15.0" />
          </font>
@@ -49,7 +56,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <CheckBox layoutX="741.0" layoutY="347.0" mnemonicParsing="false" text="Çoklu Seçim">
+      <CheckBox layoutX="767.0" layoutY="180.0" mnemonicParsing="false" text="Çoklu Seçim">
          <font>
             <Font name="Arial Bold" size="14.0" />
          </font>
@@ -57,7 +64,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </CheckBox>
-      <Button layoutX="869.0" layoutY="344.0" mnemonicParsing="false" text="Düzenle">
+      <Button layoutX="900.0" layoutY="176.0" mnemonicParsing="false" text="Düzenle">
          <font>
             <Font name="Arial Bold" size="14.0" />
          </font>
@@ -65,17 +72,17 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Label layoutY="9.0" prefHeight="34.0" prefWidth="250.0" text="Devamsızlık İşlemleri">
+      <Label layoutX="63.0" layoutY="33.0" prefHeight="38.0" prefWidth="363.0" text="Devamsızlık İşlemleri" textOverrun="CLIP">
          <font>
-            <Font name="Arial Bold" size="22.0" />
+            <Font name="Tahoma Bold" size="30.0" />
          </font>
          <padding>
             <Insets left="20.0" />
          </padding>
       </Label>
-      <ScrollPane layoutX="60.0" layoutY="404.0" prefHeight="330.0" prefWidth="912.0">
+      <ScrollPane layoutX="60.0" layoutY="237.0" prefHeight="487.0" prefWidth="912.0">
          <content>
-            <TableView prefHeight="330.0" prefWidth="900.0">
+            <TableView prefHeight="500.0" prefWidth="900.0">
                <columns>
                   <TableColumn editable="false" prefWidth="145.0" sortable="false" text="Öğrenci Numarası" />
                   <TableColumn editable="false" prefWidth="145.0" sortable="false" text="Ad" />
