@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
@@ -7,56 +8,20 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.MenuButton?>
 <?import javafx.scene.control.MenuItem?>
-<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1030.0" style="-fx-background-color: #fff3f2;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.student.is.PageControllers.ScholarPage.GradeOperationController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1030.0" stylesheets="@../css/scholar.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.student.is.PageControllers.ScholarPage.GradeOperationController">
    <children>
-      <ImageView fitHeight="775.0" fitWidth="1030.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true">
-         <image>
-            <Image url="@../images/Scholar_Absentism.jpg" />
-         </image>
-      </ImageView>
-      <MenuButton fx:id="lectureMenuButton" alignment="CENTER" contentDisplay="RIGHT" layoutX="63.0" layoutY="112.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" prefHeight="26.0" prefWidth="193.0" text="Ders Seçiniz">
-        <items>
-          <MenuItem mnemonicParsing="false" text="Lineer Cebir" />
-          <MenuItem mnemonicParsing="false" text="Veri Yapıları" />
-        </items>
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-         <font>
-            <Font name="Arial Bold" size="15.0" />
-         </font>
-      </MenuButton>
-      <Button blendMode="OVERLAY" layoutX="839.0" layoutY="31.0" mnemonicParsing="false" onAction="#BackToMainButtonAction" style="-fx-background-color: #122a61; -fx-background-radius: 15;" text="Ana Menüye Dön" textFill="WHITE">
-         <font>
-            <Font name="Arial Bold" size="14.0" />
-         </font>
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-      </Button>
-      <TextField fx:id="searchTextField" layoutX="63.0" layoutY="176.0" prefHeight="26.0" prefWidth="250.0">
+      <TextField focusTraversable="false" layoutX="63.0" layoutY="176.0" prefHeight="26.0" prefWidth="250.0">
          <font>
             <Font name="Arial Bold" size="14.0" />
          </font>
       </TextField>
-      <Button fx:id="searchButton" layoutX="323.0" layoutY="176.0" mnemonicParsing="false" onAction="#SearchButtonAction" text="Ara">
-         <font>
-            <Font name="Arial Bold" size="15.0" />
-         </font>
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-      </Button>
-      <CheckBox layoutX="767.0" layoutY="180.0" mnemonicParsing="false" text="Çoklu Seçim">
+      <CheckBox focusTraversable="false" layoutX="733.0" layoutY="180.0" mnemonicParsing="false" text="Çoklu Seçim">
          <font>
             <Font name="Arial Bold" size="14.0" />
          </font>
@@ -64,7 +29,27 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </CheckBox>
-      <Button layoutX="900.0" layoutY="176.0" mnemonicParsing="false" text="Düzenle">
+      <Label layoutY="33.0" prefHeight="34.0" prefWidth="250.0" text="Not İşlemleri">
+         <font>
+            <Font name="Arial Bold" size="30.0" />
+         </font>
+         <padding>
+            <Insets left="20.0" />
+         </padding>
+      </Label>
+      <TableView fx:id="StudentNoteOperationTable" editable="true" layoutX="60.0" layoutY="237.0" prefHeight="500.0" prefWidth="900.0">
+        <columns>
+          <TableColumn fx:id="studentNumberColumn" editable="false" prefWidth="150.0" text="Öğrenci Numarası" />
+          <TableColumn fx:id="studentNameColumn" editable="false" prefWidth="150.0" text="Ad" />
+            <TableColumn fx:id="studentSurnameColumn" editable="false" prefWidth="150.0" text="Soyad" />
+            <TableColumn fx:id="vizeNoteColumn" prefWidth="96.79998779296875" text="Vize" />
+            <TableColumn fx:id="finalNoteColumn" text="Final" />
+            <TableColumn fx:id="averageNoteColumn" editable="false" prefWidth="97.60003662109375" text="Ortalama" />
+            <TableColumn fx:id="letterNoteColumn" editable="false" prefWidth="87.99993896484375" text="Harf Notu" />
+            <TableColumn fx:id="statusColumn" editable="false" minWidth="0.0" prefWidth="84.800048828125" sortable="false" text="Durum" />
+        </columns>
+      </TableView>
+      <Button layoutX="863.0" layoutY="38.0" mnemonicParsing="false" onAction="#BackToMainButtonAction" styleClass="scholarBackToMenu" text="Ana Menüye Dön" textFill="WHITE">
          <font>
             <Font name="Arial Bold" size="14.0" />
          </font>
@@ -72,29 +57,39 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Label layoutX="63.0" layoutY="33.0" prefHeight="34.0" prefWidth="250.0" text="Not İşlemleri">
+      <Button layoutX="323.0" layoutY="176.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="98.0" styleClass="scholarBackToMenu" text="Ara" textFill="WHITE">
          <font>
-            <Font name="Tahoma Bold" size="30.0" />
+            <Font name="Arial Bold" size="15.0" />
          </font>
-         <padding>
-            <Insets left="20.0" />
-         </padding>
-      </Label>
-      <ScrollPane layoutX="60.0" layoutY="237.0" prefHeight="497.0" prefWidth="912.0">
-         <content>
-            <TableView fx:id="StudentNoteOperationTable" editable="true" prefHeight="500.0" prefWidth="900.0">
-              <columns>
-                <TableColumn fx:id="studentNumberColumn" editable="false" prefWidth="150.0" text="Öğrenci Numarası" />
-                <TableColumn fx:id="studentNameColumn" editable="false" prefWidth="150.0" text="Ad" />
-                  <TableColumn fx:id="studentSurnameColumn" editable="false" prefWidth="150.0" text="Soyad" />
-                  <TableColumn fx:id="vizeNoteColumn" text="Vize" />
-                  <TableColumn fx:id="finalNoteColumn" text="Final" />
-                  <TableColumn fx:id="averageNoteColumn" editable="false" text="Ortalama" />
-                  <TableColumn fx:id="letterNoteColumn" editable="false" text="Harf Notu" />
-                  <TableColumn fx:id="statusColumn" editable="false" minWidth="0.0" sortable="false" text="Durum" />
-              </columns>
-            </TableView>
-         </content>
-      </ScrollPane>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <FontAwesomeIcon fill="WHITE" glyphName="SEARCH" />
+         </graphic>
+      </Button>
+      <Button layoutX="863.0" layoutY="177.0" mnemonicParsing="false" styleClass="scholarBackToMenu" text="Düzenle" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <FontAwesomeIcon fill="WHITE" glyphName="EDIT" size="1.1em" />
+         </graphic>
+      </Button>
+      <MenuButton fx:id="lectureMenuButton" alignment="CENTER" contentDisplay="RIGHT" layoutX="63.0" layoutY="114.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" prefHeight="27.0" prefWidth="360.0" text="Ders Seçiniz" textFill="WHITE">
+         <items>
+            <MenuItem mnemonicParsing="false" text="Lineer Cebir" />
+            <MenuItem mnemonicParsing="false" text="Veri Yapıları" />
+         </items>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="Arial Bold" size="15.0" />
+         </font>
+      </MenuButton>
    </children>
 </AnchorPane>
