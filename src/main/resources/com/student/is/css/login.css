@@ -60,3 +60,21 @@
     -fx-background-color: linear-gradient(to bottom, #80b0ff, #4286f4);
     -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.5), 20,0,0,0);
 }
+
+.loginSendMailSuccessful {
+    -fx-background-color: linear-gradient(#11998e, #38ef7d);
+    -fx-effect: innershadow(three-pass-box, rgba(0,0,0,0.5), 30,0,0,0);
+}
+
+.loginSendMailSuccessfulExitButton {
+    -fx-background-color: transparent;
+    -fx-cursor: hand;
+}
+
+.loginSendMailSuccessfulExitButton:hover {
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.5), 20,0,0,0);
+}
+
+.loginError {
+    -fx-background-color: linear-gradient(#bc3c3c, #ff8989);
+}
