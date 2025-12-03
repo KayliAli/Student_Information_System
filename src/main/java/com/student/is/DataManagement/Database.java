@@ -13,6 +13,8 @@ public class Database {
     public static ArrayList<Lecture> lectureList = new ArrayList<>();
     public static ArrayList<Student> studentList = new ArrayList<>();
     public static ArrayList<Student> findedStudentList = new ArrayList<>();
+    public static ArrayList<Personal> findedPersonalList = new ArrayList<>();
+    public static ArrayList<Lecture> findedLectureList = new ArrayList<>();
 
     public static void main(String[] args){
         createLectureList();
@@ -333,13 +335,13 @@ public class Database {
         return false;
     }
     public static void searchInStudentData(ArrayList<Student> student,String input){
-
+        findedStudentList.clear();
         for (Student stu : student){
-            if (input.contains(stu.firstName)){
+            if (input.toLowerCase().contains(stu.firstName.toLowerCase())){
                 findedStudentList.add(stu);
                 continue;
             }
-            if (input.contains(stu.lastName)){
+            if (input.toLowerCase().contains(stu.lastName.toLowerCase())){
                 findedStudentList.add(stu);
                 continue;
             }
@@ -347,7 +349,7 @@ public class Database {
                 findedStudentList.add(stu);
                 continue;
             }
-            if (input.contains(stu.faculty)) {
+            if (input.toLowerCase().contains(stu.faculty.toLowerCase())) {
                 findedStudentList.add(stu);
                 continue;
             }
@@ -363,12 +365,53 @@ public class Database {
                 findedStudentList.add(stu);
                 continue;
             }
-            if (input.contains(stu.address)){
+            if (input.toLowerCase().contains(stu.address.toLowerCase())){
                 findedStudentList.add(stu);
                 continue;
             }
 
 
+
+        }
+
+
+
+    }
+    public static void searchInPersonalData(ArrayList<Personal> personal,String input){
+        findedPersonalList.clear();
+        for (Personal per : personal){
+            if (input.toLowerCase().contains(per.name.toLowerCase())){
+                findedPersonalList.add(per);
+                continue;
+            }
+            if (input.toLowerCase().contains(per.surname.toLowerCase())){
+                findedPersonalList.add(per);
+                continue;
+            }
+            if (input.toLowerCase().contains(per.web.toLowerCase())){
+                findedPersonalList.add(per);
+                continue;
+            }
+            if (input.toLowerCase().contains(per.perId.toLowerCase())){
+                findedPersonalList.add(per);
+                continue;
+            }
+            if (input.toLowerCase().contains(per.title.toLowerCase())){
+                findedPersonalList.add(per);
+                continue;
+            }
+        }
+
+
+
+    }
+    public static void searchInLectureData(ArrayList<Lecture> lecture,String input){
+        findedLectureList.clear();
+        for (Lecture lec : lecture){
+            if (input.toLowerCase().contains(lec.lectureName.toLowerCase())){
+                findedLectureList.add(lec);
+                continue;
+            }
 
         }
 
