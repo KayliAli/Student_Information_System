@@ -44,7 +44,7 @@
             <FontAwesomeIcon fill="WHITE" glyphName="SEARCH" />
          </graphic>
       </Button>
-      <CheckBox focusTraversable="false" layoutX="733.0" layoutY="180.0" mnemonicParsing="false" text="Çoklu Seçim">
+      <CheckBox focusTraversable="false" layoutX="707.0" layoutY="178.0" mnemonicParsing="false" styleClass="toggle-switch" text="Çoklu Seçim">
          <font>
             <Font name="Arial Bold" size="14.0" />
          </font>

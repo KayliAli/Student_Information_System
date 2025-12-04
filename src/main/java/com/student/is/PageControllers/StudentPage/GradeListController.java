@@ -24,7 +24,6 @@ public class GradeListController {
     @FXML private TableColumn<studentGradeList, String> lectureStatusColumn;
     @FXML private TableColumn<studentGradeList, Double> visaGradeColumn;
     @FXML private TableColumn<studentGradeList, Double> finalGradeColumn;
-    @FXML private TableColumn<studentGradeList, Double> makeUpGradeColumn;
     @FXML private TableColumn<studentGradeList, Double> averageColumn;
     @FXML private TableColumn<studentGradeList, String> letterGradeColumn;
     @FXML private TableColumn<studentGradeList, String> statusColumn;
@@ -36,7 +35,6 @@ public class GradeListController {
         lectureStatusColumn.setCellValueFactory(new PropertyValueFactory<>("LectureStatus"));
         visaGradeColumn.setCellValueFactory(new PropertyValueFactory<>("vizeNote"));
         finalGradeColumn.setCellValueFactory(new PropertyValueFactory<>("finalNote"));
-        makeUpGradeColumn.setCellValueFactory(new PropertyValueFactory<>("makeUpNote"));
         averageColumn.setCellValueFactory(new PropertyValueFactory<>("averageNote"));
         letterGradeColumn.setCellValueFactory(new PropertyValueFactory<>("letterNote"));
         statusColumn.setCellValueFactory(new PropertyValueFactory<>("status"));
@@ -57,7 +55,6 @@ public class GradeListController {
 
             double vizeNote=0.0;
             double finalNote=0.0;
-            double makeUpNote=0.0;   // büt notu stunote içinde bulunmuyor
             double averageNote=0.0;
             String lectureStatus="Sonuçlandırıldı";
             String letterNote;
@@ -96,7 +93,7 @@ public class GradeListController {
             else{
                 status="Geçti";
             }
-            studentGradeList yeni = new studentGradeList(lectureCode,lectureName,lectureStatus,letterNote,status,vizeNote,finalNote,makeUpNote,averageNote);
+            studentGradeList yeni = new studentGradeList(lectureCode,lectureName,lectureStatus,letterNote,status,vizeNote,finalNote,averageNote);
             Data.add(yeni);
         }
         lectureGradeTable.setItems(Data);

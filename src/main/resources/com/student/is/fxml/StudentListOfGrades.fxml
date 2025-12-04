@@ -16,12 +16,11 @@
           <TableColumn fx:id="lectureCodeColumn" editable="false" prefWidth="125.5999755859375" resizable="false" sortable="false" text="Ders Kodu" />
           <TableColumn fx:id="lectureNameColumn" editable="false" prefWidth="299.20001220703125" resizable="false" sortable="false" text="Ders Adı" />
             <TableColumn fx:id="lectureStatusColumn" editable="false" prefWidth="155.2000732421875" resizable="false" sortable="false" text="Sonuçlandırılma Durumu" />
-            <TableColumn fx:id="visaGradeColumn" editable="false" prefWidth="64.00006103515625" resizable="false" sortable="false" text="Vize Notu" />
-            <TableColumn fx:id="finalGradeColumn" editable="false" prefWidth="68.0" resizable="false" sortable="false" text="Final Notu" />
-            <TableColumn fx:id="makeUpGradeColumn" editable="false" prefWidth="99.20001220703125" resizable="false" sortable="false" text="Bütünleme Notu" />
-            <TableColumn fx:id="averageColumn" editable="false" prefWidth="60.800048828125" resizable="false" sortable="false" text="Ortalama" />
-            <TableColumn fx:id="letterGradeColumn" editable="false" prefWidth="79.199951171875" resizable="false" sortable="false" text="Harf Notu" />
-            <TableColumn fx:id="statusColumn" editable="false" prefWidth="74.4000244140625" resizable="false" sortable="false" text="Durum" />
+            <TableColumn fx:id="visaGradeColumn" editable="false" prefWidth="97.5" resizable="false" sortable="false" text="Vize Notu" />
+            <TableColumn fx:id="finalGradeColumn" editable="false" prefWidth="79.0" resizable="false" sortable="false" text="Final Notu" />
+            <TableColumn fx:id="averageColumn" editable="false" prefWidth="87.0" resizable="false" sortable="false" text="Ortalama" />
+            <TableColumn fx:id="letterGradeColumn" editable="false" prefWidth="92.5" resizable="false" sortable="false" text="Harf Notu" />
+            <TableColumn fx:id="statusColumn" editable="false" prefWidth="92.0" resizable="false" sortable="false" text="Durum" />
         </columns>
       </TableView>
       <Button layoutX="862.0" layoutY="14.0" mnemonicParsing="false" onAction="#BackToMainButtonAction" styleClass="backToMenu" text="Ana Menüye Dön" textFill="WHITE">

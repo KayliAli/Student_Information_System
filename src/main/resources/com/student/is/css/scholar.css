@@ -94,3 +94,32 @@
 .shadow {
     -fx-effect: dropshadow(two-pass-box, rgba(0, 0, 0, 0.5), 30, 0, 0, 0);
 }
+
+/* --- TOGGLE SWITCH (Şekil Ayarları) --- */
+.toggle-switch .box {
+    -fx-pref-width: 50px;
+    -fx-pref-height: 20px;
+    -fx-background-color: #ccc; /* Varsayılan gri */
+    -fx-background-radius: 10px;
+    -fx-border-radius: 12px;
+}
+
+.toggle-switch .mark {
+    -fx-pref-width: 20px;
+    -fx-pref-height: 20px;
+    -fx-background-color: white;
+    -fx-background-radius: 100px;
+    -fx-shape: "M 10 0 A 10 10 0 1 1 10 20 A 10 10 0 1 1 10 0 Z";
+    -fx-scale-shape: false;
+    -fx-translate-x: -12px;
+    -fx-cursor: hand;
+}
+
+/* CheckBox seçili olduğunda */
+.toggle-switch:selected .box {
+    -fx-background-color: #4CAF50; /* Yeşil (Ortak renk) */
+}
+
+.toggle-switch:selected .mark {
+    -fx-translate-x: 12px;
+}

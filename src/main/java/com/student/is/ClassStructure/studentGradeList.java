@@ -10,10 +10,9 @@ public class studentGradeList {
     public StringProperty status;
     public  DoubleProperty vizeNote;
     public  DoubleProperty finalNote;
-    public  DoubleProperty makeUpNote;
     public  DoubleProperty averageNote;
 
-    public  studentGradeList(String lectureCode,String lectureName,String lectureStatus,String letterNote,String status,Double vizeNote,Double finalNote ,Double makeUpNote,Double averageNote){
+    public  studentGradeList(String lectureCode,String lectureName,String lectureStatus,String letterNote,String status,Double vizeNote,Double finalNote ,Double averageNote){
         this.lectureCode = new SimpleStringProperty(lectureCode);
         this.lectureName = new SimpleStringProperty(lectureName);
         this.lectureStatus = new SimpleStringProperty(lectureStatus);
@@ -21,7 +20,6 @@ public class studentGradeList {
         this.status = new SimpleStringProperty(status);
         this.vizeNote = new SimpleDoubleProperty(vizeNote);
         this.finalNote = new SimpleDoubleProperty(finalNote);
-        this.makeUpNote = new SimpleDoubleProperty(makeUpNote);
         this.averageNote = new SimpleDoubleProperty(averageNote);
     }
 
@@ -47,9 +45,6 @@ public class studentGradeList {
     }
     public DoubleProperty finalNoteProperty(){
         return finalNote;
-    }
-    public DoubleProperty makeUpNoteProperty(){
-        return makeUpNote;
     }
     public DoubleProperty averageNoteProperty(){
         return averageNote;
