@@ -125,7 +125,7 @@
                 </Button>
             <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER">
                <image>
-                  <Image url="@../../../../../../../../../../../Users/Mengu/Downloads/Gemini_Generated_Image_8neqmz8neqmz8neq.png" />
+                  <Image url="@../images/Aora_University_White_Logo.png" />
                </image>
             </ImageView>
             <Separator prefWidth="200.0" GridPane.rowIndex="3" GridPane.valignment="TOP" />

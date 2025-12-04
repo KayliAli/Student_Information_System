@@ -413,10 +413,23 @@ public class Database {
                 findedLectureList.add(lec);
                 continue;
             }
-
+            if (input.toLowerCase().contains(lec.lectureCode.toLowerCase())){
+                findedLectureList.add(lec);
+                continue;
+            }
+            if (input.toLowerCase().contains(lec.lectureSeason.toLowerCase())){
+                findedLectureList.add(lec);
+                continue;
+            }
+            if (input.toLowerCase().contains(lec.lectureTeacher.toLowerCase())){
+                findedLectureList.add(lec);
+                continue;
+            }
+            if (input.toLowerCase().contains(lec.lectureType.toLowerCase())){
+                findedLectureList.add(lec);
+                continue;
+            }
         }
-
-
 
     }
 }
