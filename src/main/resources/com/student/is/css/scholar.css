@@ -60,6 +60,12 @@
 .table-row-cell:odd {
     -fx-background-color: #ffffff;
 }
+
+.table-row-cell:selected{
+    -fx-background-color: linear-gradient(to bottom, #03a9fc, #03dbfc);
+    -fx-text-fill: white;
+}
+
 .table-view .cell{
     -fx-cell-size: 35;
 
@@ -96,6 +102,12 @@
 }
 
 /* --- TOGGLE SWITCH (Şekil Ayarları) --- */
+.toggle-switch {
+    -fx-text-fill: black;
+    -fx-font-family: Arial;
+    -fx-font-weight: bold;
+    -fx-font-size: 14;
+}
 .toggle-switch .box {
     -fx-pref-width: 50px;
     -fx-pref-height: 20px;
@@ -117,7 +129,7 @@
 
 /* CheckBox seçili olduğunda */
 .toggle-switch:selected .box {
-    -fx-background-color: #4CAF50; /* Yeşil (Ortak renk) */
+    -fx-background-color: linear-gradient(to bottom, #4286f4, #373B44); /* Yeşil (Ortak renk) */
 }
 
 .toggle-switch:selected .mark {

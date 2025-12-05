@@ -44,7 +44,7 @@
             <FontAwesomeIcon fill="WHITE" glyphName="SEARCH" />
          </graphic>
       </Button>
-      <CheckBox fx:id="multiChoice" focusTraversable="false" layoutX="815.0" layoutY="178.0" mnemonicParsing="false" onAction="#multiChoiceAction" styleClass="toggle-switch" text="Çoklu Seçim">
+      <CheckBox fx:id="multiChoice" focusTraversable="false" layoutX="490.0" layoutY="205.0" mnemonicParsing="false" onAction="#multiChoiceAction" styleClass="toggle-switch" text="Çoklu Seçim">
          <font>
             <Font name="Arial Bold" size="14.0" />
          </font>
@@ -78,17 +78,17 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <TextField fx:id="cellTheory" disable="true" focusTraversable="false" layoutX="538.0" layoutY="200.0" prefHeight="26.0" prefWidth="64.0" promptText="Teorik">
+      <TextField fx:id="cellTheory" alignment="CENTER" disable="true" focusTraversable="false" layoutX="648.0" layoutY="202.0" prefHeight="26.0" prefWidth="90.0" promptText="Teorik">
          <font>
             <Font name="Arial Bold" size="14.0" />
          </font>
       </TextField>
-      <TextField fx:id="cellApplication" disable="true" focusTraversable="false" layoutX="628.0" layoutY="200.0" prefHeight="26.0" prefWidth="64.0" promptText="Uygulama">
+      <TextField fx:id="cellApplication" alignment="CENTER" disable="true" focusTraversable="false" layoutX="747.0" layoutY="202.0" prefHeight="26.0" prefWidth="90.0" promptText="Uygulama">
          <font>
             <Font name="Arial Bold" size="14.0" />
          </font>
       </TextField>
-      <Button fx:id="applyButton" disable="true" layoutX="705.0" layoutY="200.0" mnemonicParsing="false" onAction="#applyButtonAction" prefHeight="27.0" prefWidth="79.0" styleClass="scholarBackToMenu" text="Düzenle" textFill="WHITE">
+      <Button fx:id="applyButton" disable="true" layoutX="849.0" layoutY="200.0" mnemonicParsing="false" onAction="#applyButtonAction" prefHeight="27.0" prefWidth="79.0" styleClass="scholarBackToMenu" text="Düzenle" textFill="WHITE">
          <font>
             <Font name="Arial Bold" size="15.0" />
          </font>
