@@ -1,10 +1,7 @@
 package com.student.is.PageControllers.ScholarPage;
 
 import com.student.is.Authentication.Authentication;
-import com.student.is.ClassStructure.Lecture;
-import com.student.is.ClassStructure.Personal;
-import com.student.is.ClassStructure.PersonalAbsenceOperations;
-import com.student.is.ClassStructure.Student;
+import com.student.is.ClassStructure.*;
 import com.student.is.DataManagement.Database;
 import com.student.is.PageControllers.ContentLoader;
 import javafx.collections.FXCollections;
@@ -23,6 +20,10 @@ public class AbsenteeismOperationController {
     @FXML private MenuButton absenceMenuButton;
     @FXML public TextField searchTextField;
     @FXML public Button searchButton;
+    @FXML public CheckBox multiChoice;
+    @FXML public TextField cellTheory;
+    @FXML public TextField cellApplication;
+    @FXML public Button applyButton;
 
     @FXML private TableView<PersonalAbsenceOperations> StudentAbsenceOperationTable;
     @FXML private TableColumn<PersonalAbsenceOperations, String> studentNumberColumn;
@@ -120,5 +121,39 @@ public class AbsenteeismOperationController {
     @FXML
     public void BackToMainButtonAction(ActionEvent event) {
         ContentLoader.loadPage("/com/student/is/fxml/ScholarDashboard.fxml");
+    }
+    public void multiChoiceAction(ActionEvent actionEvent) {
+        if (multiChoice.isSelected()){
+            cellTheory.setEditable(true);
+            cellApplication.setEditable(true);
+            cellTheory.setDisable(false);
+            cellApplication.setDisable(false);
+            applyButton.setDisable(false);
+            StudentAbsenceOperationTable.getSelectionModel().setSelectionMode(
+                    SelectionMode.MULTIPLE
+            );
+        }
+        if (!multiChoice.isSelected()){
+            cellTheory.setEditable(false);
+            cellApplication.setEditable(false);
+            cellTheory.setDisable(true);
+            cellApplication.setDisable(true);
+            applyButton.setDisable(true);
+            cellTheory.setText("");
+            cellApplication.setText("");
+            StudentAbsenceOperationTable.getSelectionModel().setSelectionMode(
+                    SelectionMode.SINGLE
+            );
+        }
+    }
+    public void applyButtonAction(ActionEvent actionEvent) {
+        for (PersonalAbsenceOperations item : StudentAbsenceOperationTable.getSelectionModel().getSelectedItems()) {
+            if (!cellTheory.getText().isBlank()){
+                item.setTeorikAbsence(Integer.parseInt(cellTheory.getText()));
+            }
+            if (!cellApplication.getText().isBlank()) {
+                item.setPraciteAbsence(Integer.parseInt(cellApplication.getText()));
+            }
+        }
     }
 }
