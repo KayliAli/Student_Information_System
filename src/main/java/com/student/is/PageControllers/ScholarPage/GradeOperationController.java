@@ -10,6 +10,7 @@ import com.student.is.PageControllers.ContentLoader;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
+import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -23,6 +24,10 @@ public class GradeOperationController {
     @FXML private MenuButton lectureMenuButton;
     @FXML public TextField searchTextField;
     @FXML public Button searchButton;
+    @FXML public CheckBox multiChoice;
+    @FXML public TextField cellVize;
+    @FXML public TextField cellFinal;
+    @FXML public Button applyButton;
 
     @FXML private TableView<PersonalGradeOperations> StudentNoteOperationTable;
     @FXML private TableColumn<PersonalGradeOperations, String> studentNumberColumn;
@@ -42,6 +47,8 @@ public class GradeOperationController {
             lectureMenuButtonOnAction(personalLectures);
         }
         StudentNoteOperationTable.setEditable(true);
+
+
 
 
         studentNumberColumn.setCellValueFactory(new PropertyValueFactory<>("studentNumber"));
@@ -177,6 +184,40 @@ public class GradeOperationController {
         return Database.findedStudentList;
 
 
+    }
+    public void multiChoiceAction(ActionEvent actionEvent) {
+        if (multiChoice.isSelected()){
+            cellVize.setEditable(true);
+            cellFinal.setEditable(true);
+            cellVize.setDisable(false);
+            cellFinal.setDisable(false);
+            applyButton.setDisable(false);
+            StudentNoteOperationTable.getSelectionModel().setSelectionMode(
+                    SelectionMode.MULTIPLE
+            );
+        }
+        if (!multiChoice.isSelected()){
+            cellVize.setEditable(false);
+            cellFinal.setEditable(false);
+            cellVize.setDisable(true);
+            cellFinal.setDisable(true);
+            applyButton.setDisable(true);
+            cellVize.setText("");
+            cellFinal.setText("");
+            StudentNoteOperationTable.getSelectionModel().setSelectionMode(
+                    SelectionMode.SINGLE
+            );
+        }
+    }
+    public void applyButtonAction(ActionEvent actionEvent) {
+        for (PersonalGradeOperations item : StudentNoteOperationTable.getSelectionModel().getSelectedItems()) {
+            if (!cellVize.getText().isBlank()){
+                item.setVizeNote(Integer.parseInt(cellVize.getText()));
+            }
+            if (!cellFinal.getText().isBlank()) {
+                item.setFinalNote(Integer.parseInt(cellFinal.getText()));
+            }
+        }
     }
 
 }

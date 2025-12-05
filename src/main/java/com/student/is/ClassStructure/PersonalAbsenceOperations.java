@@ -59,4 +59,28 @@ public class PersonalAbsenceOperations {
     public StringProperty absenceStatusProperty() {
         return absenceStatus;
     }
+
+    public void setStudentNumber(String studentNumber) {
+        this.studentNumber.set(studentNumber);
+    }
+
+    public void setStudentName(String studentName) {
+        this.studentName.set(studentName);
+    }
+
+    public void setStudentSurname(String studentSurname) {
+        this.studentSurname.set(studentSurname);
+    }
+
+    public void setTeorikAbsence(int teorikAbsence) {
+        this.teorikAbsence.set(teorikAbsence);
+    }
+
+    public void setPraciteAbsence(int praciteAbsence) {
+        this.praciteAbsence.set(praciteAbsence);
+    }
+
+    public void setAbsenceStatus(String absenceStatus) {
+        this.absenceStatus.set(absenceStatus);
+    }
 }
