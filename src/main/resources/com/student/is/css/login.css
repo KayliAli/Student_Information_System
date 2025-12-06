@@ -80,9 +80,7 @@
     -fx-effect: innershadow(three-pass-box, rgba(0,0,0,0.5), 30,0,0,0);
 }
 
-/* --- TOGGLE SWITCH (Şekil Ayarları) --- */
-/* Bu ayarların burada kalması şarttır */
-.toggle-switch .box {
+.toggleSwitchStudent .box {
     -fx-pref-width: 50px;
     -fx-pref-height: 20px;
     -fx-background-color: #ccc; /* Varsayılan gri */
@@ -90,7 +88,7 @@
     -fx-border-radius: 12px;
 }
 
-.toggle-switch .mark {
+.toggleSwitchStudent .mark {
     -fx-pref-width: 20px;
     -fx-pref-height: 20px;
     -fx-background-color: white;
@@ -102,10 +100,39 @@
 }
 
 /* CheckBox seçili olduğunda */
-.toggle-switch:selected .box {
-    -fx-background-color: #4CAF50; /* Yeşil (Ortak renk) */
+.toggleSwitchStudent:selected .box {
+    -fx-background-color: linear-gradient(to bottom, #df4444, #bc3c3c);
 }
 
-.toggle-switch:selected .mark {
+.toggleSwitchStudent:selected .mark {
     -fx-translate-x: 12px;
 }
+
+.toggleSwitchScholar .box {
+    -fx-pref-width: 50px;
+    -fx-pref-height: 20px;
+    -fx-background-color: #ccc; /* Varsayılan gri */
+    -fx-background-radius: 10px;
+    -fx-border-radius: 12px;
+}
+
+.toggleSwitchScholar .mark {
+    -fx-pref-width: 20px;
+    -fx-pref-height: 20px;
+    -fx-background-color: white;
+    -fx-background-radius: 100px;
+    -fx-shape: "M 10 0 A 10 10 0 1 1 10 20 A 10 10 0 1 1 10 0 Z";
+    -fx-scale-shape: false;
+    -fx-translate-x: -12px;
+    -fx-cursor: hand;
+}
+
+/* CheckBox seçili olduğunda */
+.toggleSwitchScholar:selected .box {
+    -fx-background-color: linear-gradient(to bottom, #4286f4, #373B44);
+}
+
+.toggleSwitchScholar:selected .mark {
+    -fx-translate-x: 12px;
+}
+

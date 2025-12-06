@@ -117,13 +117,16 @@
 }
 
 .table-row-cell:selected{
-    -fx-background-color: linear-gradient(to bottom, #03a9fc, #03dbfc);
+    -fx-background-color: linear-gradient(to bottom, #6441A5, #b28ffc);
+}
+
+.table-row-cell:selected .table-cell {
     -fx-text-fill: white;
+    -fx-font-weight: bold;
 }
 
 .table-view .cell{
     -fx-cell-size: 35;
-
 }
 
 .table-view .table-cell {
@@ -150,4 +153,32 @@
     -fx-font-family: Arial;
     -fx-font-weight: bold;
     -fx-padding: 0 69 20 69;
+}
+
+.toggle-switch .box {
+    -fx-pref-width: 50px;
+    -fx-pref-height: 20px;
+    -fx-background-color: #ccc; /* Varsayılan gri */
+    -fx-background-radius: 10px;
+    -fx-border-radius: 12px;
+}
+
+.toggle-switch .mark {
+    -fx-pref-width: 20px;
+    -fx-pref-height: 20px;
+    -fx-background-color: white;
+    -fx-background-radius: 100px;
+    -fx-shape: "M 10 0 A 10 10 0 1 1 10 20 A 10 10 0 1 1 10 0 Z";
+    -fx-scale-shape: false;
+    -fx-translate-x: -12px;
+    -fx-cursor: hand;
+}
+
+/* CheckBox seçili olduğunda */
+.toggle-switch:selected .box {
+    -fx-background-color: linear-gradient(to bottom, #6441A5, #2a0845);
+}
+
+.toggle-switch:selected .mark {
+    -fx-translate-x: 12px;
 }
