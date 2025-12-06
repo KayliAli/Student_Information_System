@@ -33,17 +33,6 @@
             <TableColumn fx:id="LectureSeasonColumn" prefWidth="91.9998779296875" text="Dönem" />
          </columns>
       </TableView>
-      <Button layoutX="839.0" layoutY="37.0" mnemonicParsing="false" styleClass="adminBackToMenu" text="Ana Menüye Dön" textFill="WHITE">
-         <font>
-            <Font name="Arial Bold" size="14.0" />
-         </font>
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-         <graphic>
-            <FontAwesomeIcon fill="WHITE" glyphName="HOME" />
-         </graphic>
-      </Button>
       <Button layoutX="733.0" layoutY="147.0" mnemonicParsing="false" styleClass="adminBackToMenu" text="Ders Ekle">
          <graphic>
             <FontAwesomeIcon fill="WHITE" glyphName="PLUS" />

@@ -47,18 +47,7 @@
             <Insets left="20.0" />
          </padding>
       </Label>
-      <Button layoutX="853.0" layoutY="39.0" mnemonicParsing="false" styleClass="adminBackToMenu" text="Ana Menüye Dön" textFill="WHITE">
-         <font>
-            <Font name="Arial Bold" size="14.0" />
-         </font>
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-         <graphic>
-            <FontAwesomeIcon fill="WHITE" glyphName="HOME" />
-         </graphic>
-      </Button>
-      <Button fx:id="searchButton" layoutX="323.0" layoutY="176.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="98.0" styleClass="adminBackToMenu" text="Ara" textFill="WHITE">
+      <Button layoutX="323.0" layoutY="176.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="98.0" styleClass="adminBackToMenu" text="Ara" textFill="WHITE">
          <font>
             <Font name="Arial Bold" size="15.0" />
          </font>
