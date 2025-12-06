@@ -32,7 +32,7 @@
             <TableColumn fx:id="colOfficehours" prefWidth="144.800048828125" text="Ofis Saatleri" />
          </columns>
       </TableView>
-      <Button layoutX="419.0" layoutY="147.0" mnemonicParsing="false" styleClass="adminBackToMenu" text="Akademisyen Şifre Değiştir">
+      <Button layoutX="419.0" layoutY="147.0" mnemonicParsing="false" onAction="#changePasswordScholarActionButton" styleClass="adminBackToMenu" text="Akademisyen Şifre Değiştir">
          <graphic>
             <FontAwesomeIcon fill="WHITE" glyphName="KEY" />
          </graphic>
