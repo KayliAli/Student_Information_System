@@ -33,7 +33,7 @@
             <Font name="Arial Bold" size="14.0" />
          </font>
       </TextField>
-      <CheckBox fx:id="multiChoice" focusTraversable="false" layoutX="537.0" layoutY="205.0" mnemonicParsing="false" onAction="#multiChoiceAction" styleClass="toggle-switch" text="Çoklu Seçim">
+      <CheckBox fx:id="multiChoice" focusTraversable="false" layoutX="515.0" layoutY="205.0" mnemonicParsing="false" onAction="#multiChoiceAction" styleClass="toggle-switch" text="Çoklu Seçim">
          <font>
             <Font name="Arial Bold" size="14.0" />
          </font>

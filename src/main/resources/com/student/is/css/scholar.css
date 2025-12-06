@@ -62,13 +62,16 @@
 }
 
 .table-row-cell:selected{
-    -fx-background-color: linear-gradient(to bottom, #03a9fc, #03dbfc);
+    -fx-background-color: linear-gradient(to bottom, #0b0866, #41c0ff);
+}
+
+.table-row-cell:selected .table-cell {
     -fx-text-fill: white;
+    -fx-font-weight: bold;
 }
 
 .table-view .cell{
     -fx-cell-size: 35;
-
 }
 
 .table-view .table-cell {
@@ -129,7 +132,7 @@
 
 /* CheckBox seçili olduğunda */
 .toggle-switch:selected .box {
-    -fx-background-color: linear-gradient(to bottom, #4286f4, #373B44); /* Yeşil (Ortak renk) */
+    -fx-background-color: linear-gradient(to bottom, #4286f4, #373B44);
 }
 
 .toggle-switch:selected .mark {
