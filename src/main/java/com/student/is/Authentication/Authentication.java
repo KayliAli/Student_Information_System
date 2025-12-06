@@ -15,8 +15,6 @@ public class Authentication {
     public static Admin currentAdminUser;
 
     public static boolean checkStudentAuth(String login , String password) throws JRException {
-        //login = "02240200004@ogr.inonu.edu.tr";
-        //password = "12345";
         if (!login.contains("@")) {
             return false;
         } else if (login.split("@")[1].equals("inonu.edu.tr") || login.split("@")[1].equals("ogr.inonu.edu.tr")){
@@ -49,13 +47,7 @@ public class Authentication {
         }
         return false;
     }
-
-
-
-
     public static boolean checkPersonalAuth(String login , String password) {
-        //login = "erhan.akkaya@inonu.edu.tr";
-        //password = "12345";
         if (!login.contains("@")) {
             return false;
         }
