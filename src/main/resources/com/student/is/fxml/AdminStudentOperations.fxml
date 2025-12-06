@@ -33,7 +33,7 @@
             <TableColumn fx:id="emailColumn" prefWidth="140.79998779296875" text="E-Posta" />
         </columns>
       </TableView>
-      <Button layoutX="495.0" layoutY="147.0" mnemonicParsing="false" styleClass="adminBackToMenu" text="Öğrenci Şifre Değiştir">
+      <Button layoutX="495.0" layoutY="147.0" mnemonicParsing="false" onAction="#changePasswordActionButton" styleClass="adminBackToMenu" text="Öğrenci Şifre Değiştir">
          <graphic>
             <FontAwesomeIcon fill="WHITE" glyphName="KEY" />
          </graphic>
