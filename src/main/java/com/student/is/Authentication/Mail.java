@@ -9,8 +9,8 @@ public class Mail {
     public static boolean forgotPasswordMail(String login) {
         int newpassword = RandomGenerator.getDefault().nextInt(3333,9999);
         try {
-            final String mailServerUsername = "incomservicetm@gmail.com";
-            final String mailServerPassword = "nneq byst lpdz tfhx";
+            final String mailServerUsername = "******@gmail.com";
+            final String mailServerPassword = "";
             final String mailServer = "smtp.gmail.com";
 
             Properties properties = new Properties();
