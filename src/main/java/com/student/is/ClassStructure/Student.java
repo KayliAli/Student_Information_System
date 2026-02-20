@@ -132,7 +132,7 @@ public class Student {
             notes.fall1 = (int) fallvize / fallvizeCount;
             notes.fall2 = (int) fallfinal / fallfinalCount;
             notes.spring1 = (int) springvize / springvizeCount;
-            notes.spring1 = (int) springfinal / springfinalCount;
+            notes.spring2 = (int) springfinal / springfinalCount;
             double gpa_4 = (double)(((notes.fall1+notes.fall2+notes.spring1+notes.spring1)/4)*4.0)/100;
             this.gpa = gpa_4;
         }
